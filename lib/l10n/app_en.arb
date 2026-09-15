@@ -1,0 +1,49 @@
+{
+  "@@locale": "en",
+  "appTitle": "Brain Rush",
+  "splashSubtitle": "Challenge your mind\nBreak your limits!",
+  "loading": "Loading...",
+  "playerName": "Player",
+  "levelLabel": "Level 1",
+  "startPlay": "Start playing",
+  "chooseTopic": "Choose topic",
+  "leaderboard": "Leaderboard",
+  "achievements": "Achievements",
+  "comingSoon": "Coming soon",
+  "topicMath": "Math",
+  "topicMathDesc": "Train your thinking",
+  "topicLogic": "Logic",
+  "topicLogicDesc": "Challenge your mind",
+  "topicEnglish": "English",
+  "topicEnglishDesc": "Find the mistakes",
+  "topicMixed": "Mixed",
+  "topicMixedDesc": "Combine many question types",
+  "topicRandom": "Random",
+  "topicRandomDesc": "A surprise every time",
+  "badgeQuickMath": "Quick math",
+  "badgeLogic": "Logic",
+  "badgeEnglish": "English",
+  "badgeMixed": "Mixed",
+  "badgeRandom": "Random",
+  "pause": "Pause",
+  "resume": "Resume",
+  "pausedHint": "Paused — tap ▶ to continue",
+  "timeUp": "Time's up!",
+  "scoreLabel": "Score: {score}",
+  "@scoreLabel": {
+    "placeholders": {
+      "score": { "type": "int" }
+    }
+  },
+  "answeredLabel": "Answered: {answered} / {total}",
+  "@answeredLabel": {
+    "placeholders": {
+      "answered": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "playAgain": "Play again",
+  "language": "Language",
+  "vietnamese": "Tiếng Việt",
+  "english": "English"
+}

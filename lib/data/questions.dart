@@ -4,9 +4,27 @@ import '../models/question.dart';
 const sampleQuestions = <Question>[
   Question(
     type: QuestionType.math,
+    prompt: '8 + 7 = ?',
+    options: ['14', '15', '16', '17'],
+    correctIndex: 1,
+  ),
+  Question(
+    type: QuestionType.math,
     prompt: '15 × 4 − 20 = ?',
     options: ['40', '45', '50', '60'],
     correctIndex: 0,
+  ),
+  Question(
+    type: QuestionType.math,
+    prompt: '1/2 + 1/4 = ?',
+    options: ['1/6', '2/6', '3/4', '1/8'],
+    correctIndex: 2,
+  ),
+  Question(
+    type: QuestionType.math,
+    prompt: '9 × 6 = ?',
+    options: ['45', '54', '56', '63'],
+    correctIndex: 1,
   ),
   Question(
     type: QuestionType.logic,
@@ -29,12 +47,6 @@ const sampleQuestions = <Question>[
       'She gone to school every day.',
     ],
     correctIndex: 1,
-  ),
-  Question(
-    type: QuestionType.math,
-    prompt: '1/2 + 1/4 = ?',
-    options: ['1/6', '2/6', '3/4', '1/8'],
-    correctIndex: 2,
   ),
   Question(
     type: QuestionType.english,

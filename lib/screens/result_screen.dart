@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/app_localizations.dart';
 import 'home_screen.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -16,6 +17,8 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -25,7 +28,7 @@ class ResultScreen extends StatelessWidget {
             children: [
               const Spacer(),
               Text(
-                'Hết giờ!',
+                l10n.timeUp,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       fontWeight: FontWeight.bold,
@@ -33,13 +36,13 @@ class ResultScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                'Điểm: $score',
+                l10n.scoreLabel(score),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 8),
               Text(
-                'Đã trả lời: $answered / $total câu',
+                l10n.answeredLabel(answered, total),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Colors.black54,
@@ -55,9 +58,9 @@ class ResultScreen extends StatelessWidget {
                     (_) => false,
                   );
                 },
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 14),
-                  child: Text('Chơi lại'),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  child: Text(l10n.playAgain),
                 ),
               ),
               const SizedBox(height: 24),

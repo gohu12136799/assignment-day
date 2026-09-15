@@ -1,0 +1,4 @@
+# Học: cấu hình gen-l10n — Flutter tự sinh AppLocalizations từ file .arb
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart

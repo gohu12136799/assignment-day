@@ -1,0 +1,49 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Brain Rush",
+  "splashSubtitle": "Thử thách trí tuệ\nBứt phá giới hạn!",
+  "loading": "Đang tải...",
+  "playerName": "Người chơi",
+  "levelLabel": "Level 1",
+  "startPlay": "Bắt đầu chơi",
+  "chooseTopic": "Chọn chủ đề",
+  "leaderboard": "Bảng xếp hạng",
+  "achievements": "Thành tích",
+  "comingSoon": "Tính năng sẽ làm ở bước sau",
+  "topicMath": "Toán học",
+  "topicMathDesc": "Rèn luyện tư duy",
+  "topicLogic": "Logic",
+  "topicLogicDesc": "Thử thách tư duy",
+  "topicEnglish": "Tiếng Anh",
+  "topicEnglishDesc": "Tìm lỗi sai",
+  "topicMixed": "Hỗn hợp",
+  "topicMixedDesc": "Kết hợp nhiều dạng câu hỏi",
+  "topicRandom": "Ngẫu nhiên",
+  "topicRandomDesc": "Mỗi lần là 1 bất ngờ",
+  "badgeQuickMath": "Tính nhanh",
+  "badgeLogic": "Logic",
+  "badgeEnglish": "Tiếng Anh",
+  "badgeMixed": "Hỗn hợp",
+  "badgeRandom": "Ngẫu nhiên",
+  "pause": "Tạm dừng",
+  "resume": "Tiếp tục",
+  "pausedHint": "Đã tạm dừng — nhấn ▶ để tiếp tục",
+  "timeUp": "Hết giờ!",
+  "scoreLabel": "Điểm: {score}",
+  "@scoreLabel": {
+    "placeholders": {
+      "score": { "type": "int" }
+    }
+  },
+  "answeredLabel": "Đã trả lời: {answered} / {total} câu",
+  "@answeredLabel": {
+    "placeholders": {
+      "answered": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "playAgain": "Chơi lại",
+  "language": "Ngôn ngữ",
+  "vietnamese": "Tiếng Việt",
+  "english": "English"
+}
