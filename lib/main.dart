@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'l10n/app_localizations.dart';
 import 'locale_controller.dart';
 import 'screens/splash_screen.dart';
+import 'theme/app_colors.dart';
 
 void main() {
   runApp(const AssignmentDayApp());
@@ -46,7 +47,12 @@ class _AssignmentDayAppState extends State<AssignmentDayApp> {
               GlobalCupertinoLocalizations.delegate,
             ],
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: AppColors.bgBlue,
+              ).copyWith(
+                primary: AppColors.bgBlue,
+                secondary: AppColors.yellow,
+              ),
               useMaterial3: true,
               fontFamily: 'NunitoSans',
             ),

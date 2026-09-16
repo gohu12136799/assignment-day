@@ -10,6 +10,16 @@ abstract final class AppColors {
   static const yellow = Color(0xFFFFC107);
   static const cardBg = Color(0xFF0A2F70);
   static const borderGray = Color(0xFFBEBEBE);
+  static const answerBlue = Color(0xFF1976D2);
+  static const answerGreen = Color(0xFF43A047);
+  static const answerYellow = Color(0xFFFDD835);
+  static const answerPurple = Color(0xFF8E24AA);
+  static const answerColors = <Color>[
+    answerBlue,
+    answerGreen,
+    answerYellow,
+    answerPurple,
+  ];
   static const bgLight = Color.fromARGB(255, 245, 249, 249);
 
   // --- Gradient toả từ giữa: đậm tâm → nhạt ra ngoài ---
@@ -39,5 +49,33 @@ abstract final class AppColors {
   static const greenIconGradient = <Color>[
     Color(0xFF2E7D32),
     Color(0xFF81C784),
+  ];
+
+  /// 10 gradient đáp án Toán. Ghép từ màu đã có, không thêm hex mới.
+  static const mathAnswerGradients = <List<Color>>[
+    redIconGradient,
+    yellowGradient,
+    greenGradient,
+    blueGradient,
+    purpleGradient,
+    yellowIconGradient,
+    blueIconGradient,
+    purpleIconGradient,
+    greenIconGradient,
+    [bgBlueDeep, bgBlueLight],
+  ];
+
+  /// Vàng sáng cần chữ đậm. Còn lại chữ trắng.
+  static const mathAnswerDarkText = <bool>[
+    false,
+    true,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
   ];
 }

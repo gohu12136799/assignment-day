@@ -97,6 +97,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get timeUp => 'Hết giờ!';
 
   @override
+  String get examComplete => 'Hoàn thành!';
+
+  @override
   String scoreLabel(int score) {
     return 'Điểm: $score';
   }
@@ -110,6 +113,45 @@ class AppLocalizationsVi extends AppLocalizations {
   String get playAgain => 'Chơi lại';
 
   @override
+  String get goHome => 'Về trang chủ';
+
+  @override
+  String get resultScore => 'Điểm số';
+
+  @override
+  String get resultTime => 'Thời gian';
+
+  @override
+  String get resultRank => 'Xếp hạng';
+
+  @override
+  String get englishComplete => 'Hoàn thành tiếng Anh';
+
+  @override
+  String errorsFound(int found, int total) {
+    return 'Tìm được $found / $total lỗi';
+  }
+
+  @override
+  String get scoreHeading => 'Điểm';
+
+  @override
+  String get correctAnswer => 'Đáp án đúng';
+
+  @override
+  String get yourAnswer => 'Lựa chọn của bạn';
+
+  @override
+  String logicChoice(int question, int choice) {
+    return 'Câu $question: đáp án $choice';
+  }
+
+  @override
+  String logicUnanswered(int question) {
+    return 'Câu $question: không trả lời';
+  }
+
+  @override
   String get language => 'Ngôn ngữ';
 
   @override
@@ -117,4 +159,34 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get english => 'English';
+
+  @override
+  String get settings => 'Cài đặt';
+
+  @override
+  String get sound => 'Âm thanh';
+
+  @override
+  String get backgroundMusic => 'Nhạc nền';
+
+  @override
+  String get notifications => 'Thông báo';
+
+  @override
+  String get appearance => 'Chủ đề giao diện';
+
+  @override
+  String get lightTheme => 'Sáng';
+
+  @override
+  String get guide => 'Hướng dẫn';
+
+  @override
+  String get rateApp => 'Đánh giá ứng dụng';
+
+  @override
+  String get contact => 'Liên hệ';
+
+  @override
+  String get logOut => 'Đăng xuất';
 }

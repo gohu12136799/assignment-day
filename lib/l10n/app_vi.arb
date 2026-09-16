@@ -29,6 +29,7 @@
   "resume": "Tiếp tục",
   "pausedHint": "Đã tạm dừng — nhấn ▶ để tiếp tục",
   "timeUp": "Hết giờ!",
+  "examComplete": "Hoàn thành!",
   "scoreLabel": "Điểm: {score}",
   "@scoreLabel": {
     "placeholders": {
@@ -43,7 +44,45 @@
     }
   },
   "playAgain": "Chơi lại",
+  "goHome": "Về trang chủ",
+  "resultScore": "Điểm số",
+  "resultTime": "Thời gian",
+  "resultRank": "Xếp hạng",
+  "englishComplete": "Hoàn thành tiếng Anh",
+  "errorsFound": "Tìm được {found} / {total} lỗi",
+  "@errorsFound": {
+    "placeholders": {
+      "found": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "scoreHeading": "Điểm",
+  "correctAnswer": "Đáp án đúng",
+  "yourAnswer": "Lựa chọn của bạn",
+  "logicChoice": "Câu {question}: đáp án {choice}",
+  "@logicChoice": {
+    "placeholders": {
+      "question": { "type": "int" },
+      "choice": { "type": "int" }
+    }
+  },
+  "logicUnanswered": "Câu {question}: không trả lời",
+  "@logicUnanswered": {
+    "placeholders": {
+      "question": { "type": "int" }
+    }
+  },
   "language": "Ngôn ngữ",
   "vietnamese": "Tiếng Việt",
-  "english": "English"
+  "english": "English",
+  "settings": "Cài đặt",
+  "sound": "Âm thanh",
+  "backgroundMusic": "Nhạc nền",
+  "notifications": "Thông báo",
+  "appearance": "Chủ đề giao diện",
+  "lightTheme": "Sáng",
+  "guide": "Hướng dẫn",
+  "rateApp": "Đánh giá ứng dụng",
+  "contact": "Liên hệ",
+  "logOut": "Đăng xuất"
 }

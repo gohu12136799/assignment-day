@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <defs>
+    <!-- Trophy Gold Gradients -->
+    <linearGradient id="goldCup" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE047"/>
+      <stop offset="45%" stop-color="#FFC700"/>
+      <stop offset="100%" stop-color="#FF9800"/>
+    </linearGradient>
+    
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="100%" stop-color="#FFE042"/>
+    </linearGradient>
+
+    <linearGradient id="goldShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F57C00"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+
+    <linearGradient id="handleGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCA28"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FB8C00"/>
+    </linearGradient>
+
+    <linearGradient id="handleGradRight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFCA28"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FB8C00"/>
+    </linearGradient>
+
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDE7"/>
+      <stop offset="50%" stop-color="#FFF59D"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+    
+    <linearGradient id="bgStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="starGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComponentTransfer in="blur" result="brightBlur">
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="brightBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <g id="sparkle">
+      <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#FFF59D"/>
+    </g>
+
+    <g id="miniStar">
+      <path d="M 0,-15 L 4.5,-4.5 L 15,-3 L 7.5,4.5 L 9.5,15 L 0,9.5 L -9.5,15 L -7.5,4.5 L -15,-3 L -4.5,-4.5 Z" fill="url(#bgStarGrad)"/>
+    </g>
+  </defs>
+
+  <!-- Background Rays -->
+  <g opacity="0.15" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round">
+    <line x1="250" y1="180" x2="110" y2="70" />
+    <line x1="250" y1="180" x2="390" y2="70" />
+    <line x1="250" y1="180" x2="70" y2="180" />
+    <line x1="250" y1="180" x2="430" y2="180" />
+    <line x1="250" y1="180" x2="120" y2="280" />
+    <line x1="250" y1="180" x2="380" y2="280" />
+  </g>
+
+  <!-- Stars -->
+  <g transform="translate(85, 220) scale(1.8)" filter="url(#starGlow)">
+    <use href="#miniStar"/>
+  </g>
+  <g transform="translate(415, 230) scale(1.7)" filter="url(#starGlow)">
+    <use href="#miniStar"/>
+  </g>
+  <g transform="translate(35, 320) scale(1.1)" filter="url(#starGlow)">
+    <use href="#miniStar"/>
+  </g>
+  <g transform="translate(465, 325) scale(1.1)" filter="url(#starGlow)">
+    <use href="#miniStar"/>
+  </g>
+
+  <!-- Sparkles -->
+  <use href="#sparkle" transform="translate(250, 40) scale(1.2)" />
+  <use href="#sparkle" transform="translate(140, 305) scale(0.6)" />
+  <use href="#sparkle" transform="translate(365, 305) scale(0.6)" />
+  
+  <circle cx="105" cy="115" r="4" fill="#80DEEA" opacity="0.8"/>
+  <circle cx="380" cy="105" r="5" fill="#A7FFEB" opacity="0.8"/>
+  <circle cx="190" cy="50" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="305" cy="55" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- TROPHY -->
+  <g filter="url(#softGlow)">
+    <!-- Left Handle -->
+    <path d="M 190 120 C 110 120 100 220 190 235 L 195 210 C 135 200 138 140 190 142 Z" fill="url(#handleGradLeft)"/>
+    <path d="M 185 120 C 120 120 115 210 185 225 L 182 233 C 105 218 110 120 188 120 Z" fill="url(#goldShadow)" opacity="0.4"/>
+
+    <!-- Right Handle -->
+    <path d="M 310 120 C 390 120 400 220 310 235 L 305 210 C 365 200 362 140 310 142 Z" fill="url(#handleGradRight)"/>
+    <path d="M 315 120 C 380 120 385 210 315 225 L 318 233 C 395 218 390 120 312 120 Z" fill="url(#goldShadow)" opacity="0.3"/>
+
+    <!-- Base -->
+    <path d="M 200 330 L 300 330 C 315 330 325 342 320 355 L 315 365 C 310 372 300 375 290 375 L 210 375 C 200 375 190 372 185 365 L 180 355 C 175 342 185 330 200 330 Z" fill="url(#goldShadow)"/>
+    <path d="M 195 330 L 305 330 C 315 330 320 338 315 348 L 310 355 L 190 355 L 185 348 C 180 338 185 330 195 330 Z" fill="url(#goldCup)"/>
+    <ellipse cx="250" cy="333" rx="55" ry="5" fill="url(#goldHighlight)"/>
+
+    <!-- Stem -->
+    <path d="M 220 295 L 280 295 L 288 332 L 212 332 Z" fill="url(#goldShadow)"/>
+    <path d="M 220 295 L 280 295 L 285 320 L 215 320 Z" fill="url(#goldCup)"/>
+    <path d="M 230 250 C 230 280 222 295 220 300 L 280 300 C 278 295 270 280 270 250 Z" fill="url(#goldCup)"/>
+    <path d="M 250 250 C 262 270 272 285 280 300 L 270 300 C 265 285 255 270 250 250 Z" fill="url(#goldShadow)" opacity="0.3"/>
+
+    <!-- Main Cup Body -->
+    <path d="M 175 105 C 175 220 220 270 250 270 C 280 270 325 220 325 105 Z" fill="url(#goldCup)"/>
+
+    <!-- Cup Rim -->
+    <ellipse cx="250" cy="105" rx="75" ry="18" fill="url(#goldShadow)"/>
+    <ellipse cx="250" cy="103" rx="75" ry="16" fill="url(#goldCup)"/>
+    <ellipse cx="250" cy="100" rx="67" ry="12" fill="url(#goldHighlight)"/>
+
+    <!-- Highlights -->
+    <path d="M 183 115 C 183 180 205 230 230 255 C 215 235 195 185 195 120 C 195 113 188 110 183 115 Z" fill="#FFFFFF" opacity="0.45"/>
+    <path d="M 317 115 C 317 180 295 230 270 255 C 285 235 305 185 305 120 C 305 113 312 110 317 115 Z" fill="url(#goldShadow)" opacity="0.35"/>
+
+    <!-- Star Emblem -->
+    <g transform="translate(250, 180) scale(2.2)" filter="url(#starGlow)">
+      <path d="M 0,-15 L 4.5,-4.5 L 15,-3 L 7.5,4.5 L 9.5,15 L 0,9.5 L -9.5,15 L -7.5,4.5 L -15,-3 L -4.5,-4.5 Z" fill="url(#starGrad)"/>
+    </g>
+  </g>
+</svg>

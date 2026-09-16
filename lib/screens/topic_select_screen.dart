@@ -4,7 +4,9 @@ import '../l10n/app_localizations.dart';
 import '../models/play_topic.dart';
 import '../theme/app_colors.dart';
 import '../widgets/menu_row.dart';
+import 'english_game_screen.dart';
 import 'game_screen.dart';
+import 'logic_game_screen.dart';
 
 /// Màn Chọn chủ đề.
 class TopicSelectScreen extends StatelessWidget {
@@ -96,7 +98,11 @@ class TopicSelectScreen extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute<void>(
-                  builder: (_) => GameScreen(topic: item.topic),
+                  builder: (_) => switch (item.topic) {
+                    PlayTopic.english => const EnglishGameScreen(),
+                    PlayTopic.logic => const LogicGameScreen(),
+                    _ => GameScreen(topic: item.topic),
+                  },
                 ),
               );
             },

@@ -29,6 +29,7 @@
   "resume": "Resume",
   "pausedHint": "Paused — tap ▶ to continue",
   "timeUp": "Time's up!",
+  "examComplete": "Finished!",
   "scoreLabel": "Score: {score}",
   "@scoreLabel": {
     "placeholders": {
@@ -43,7 +44,45 @@
     }
   },
   "playAgain": "Play again",
+  "goHome": "Back to home",
+  "resultScore": "Score",
+  "resultTime": "Time",
+  "resultRank": "Rank",
+  "englishComplete": "English Complete",
+  "errorsFound": "{found} / {total} errors found",
+  "@errorsFound": {
+    "placeholders": {
+      "found": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "scoreHeading": "Score",
+  "correctAnswer": "Correct Answer",
+  "yourAnswer": "Your Answer",
+  "logicChoice": "Question {question}: answer {choice}",
+  "@logicChoice": {
+    "placeholders": {
+      "question": { "type": "int" },
+      "choice": { "type": "int" }
+    }
+  },
+  "logicUnanswered": "Question {question}: unanswered",
+  "@logicUnanswered": {
+    "placeholders": {
+      "question": { "type": "int" }
+    }
+  },
   "language": "Language",
   "vietnamese": "Tiếng Việt",
-  "english": "English"
+  "english": "English",
+  "settings": "Settings",
+  "sound": "Sound",
+  "backgroundMusic": "Background music",
+  "notifications": "Notifications",
+  "appearance": "Appearance",
+  "lightTheme": "Light",
+  "guide": "Guide",
+  "rateApp": "Rate the app",
+  "contact": "Contact",
+  "logOut": "Log out"
 }

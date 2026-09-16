@@ -272,6 +272,12 @@ abstract class AppLocalizations {
   /// **'Time\'s up!'**
   String get timeUp;
 
+  /// No description provided for @examComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Finished!'**
+  String get examComplete;
+
   /// No description provided for @scoreLabel.
   ///
   /// In en, this message translates to:
@@ -290,6 +296,72 @@ abstract class AppLocalizations {
   /// **'Play again'**
   String get playAgain;
 
+  /// No description provided for @goHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to home'**
+  String get goHome;
+
+  /// No description provided for @resultScore.
+  ///
+  /// In en, this message translates to:
+  /// **'Score'**
+  String get resultScore;
+
+  /// No description provided for @resultTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get resultTime;
+
+  /// No description provided for @resultRank.
+  ///
+  /// In en, this message translates to:
+  /// **'Rank'**
+  String get resultRank;
+
+  /// No description provided for @englishComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'English Complete'**
+  String get englishComplete;
+
+  /// No description provided for @errorsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'{found} / {total} errors found'**
+  String errorsFound(int found, int total);
+
+  /// No description provided for @scoreHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Score'**
+  String get scoreHeading;
+
+  /// No description provided for @correctAnswer.
+  ///
+  /// In en, this message translates to:
+  /// **'Correct Answer'**
+  String get correctAnswer;
+
+  /// No description provided for @yourAnswer.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Answer'**
+  String get yourAnswer;
+
+  /// No description provided for @logicChoice.
+  ///
+  /// In en, this message translates to:
+  /// **'Question {question}: answer {choice}'**
+  String logicChoice(int question, int choice);
+
+  /// No description provided for @logicUnanswered.
+  ///
+  /// In en, this message translates to:
+  /// **'Question {question}: unanswered'**
+  String logicUnanswered(int question);
+
   /// No description provided for @language.
   ///
   /// In en, this message translates to:
@@ -307,6 +379,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'English'**
   String get english;
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// No description provided for @sound.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound'**
+  String get sound;
+
+  /// No description provided for @backgroundMusic.
+  ///
+  /// In en, this message translates to:
+  /// **'Background music'**
+  String get backgroundMusic;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @appearance.
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get appearance;
+
+  /// No description provided for @lightTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get lightTheme;
+
+  /// No description provided for @guide.
+  ///
+  /// In en, this message translates to:
+  /// **'Guide'**
+  String get guide;
+
+  /// No description provided for @rateApp.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate the app'**
+  String get rateApp;
+
+  /// No description provided for @contact.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact'**
+  String get contact;
+
+  /// No description provided for @logOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get logOut;
 }
 
 class _AppLocalizationsDelegate

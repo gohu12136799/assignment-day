@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:assignment_day/main.dart';
@@ -12,6 +13,6 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Bắt đầu chơi'), findsOneWidget);
-    expect(find.text('EN'), findsOneWidget);
+    expect(find.byIcon(Icons.settings_rounded), findsOneWidget);
   });
 }

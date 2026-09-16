@@ -70,7 +70,7 @@ class MenuRow extends StatelessWidget {
               color: _isCardStyle ? Colors.white : null,
               borderRadius: radius,
               border: _isCardStyle
-                  ? Border.all(color: const Color(0xFFBFBFBF), width: 1)
+                  ? Border.all(color: AppColors.borderGray, width: 1)
                   : null,
               gradient: gradient == null
                   ? null
@@ -133,7 +133,7 @@ class MenuRow extends StatelessWidget {
       style: TextStyle(
         color: _isCardStyle ? Colors.black : foreground,
         fontSize: 20,
-        fontWeight: _isCardStyle ? FontWeight.w700 : FontWeight.w800,
+        fontWeight: FontWeight.w700,
       ),
     );
 
