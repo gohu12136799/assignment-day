@@ -439,6 +439,270 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Log out'**
   String get logOut;
+
+  /// No description provided for @logIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in'**
+  String get logIn;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up'**
+  String get signUp;
+
+  /// No description provided for @authWelcomeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to Brain Rush'**
+  String get authWelcomeTitle;
+
+  /// No description provided for @authWelcomeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to save progress, or play as a guest.'**
+  String get authWelcomeSubtitle;
+
+  /// No description provided for @continueWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with Google'**
+  String get continueWithGoogle;
+
+  /// No description provided for @continueWithFacebook.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with Facebook'**
+  String get continueWithFacebook;
+
+  /// No description provided for @continueWithEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with email'**
+  String get continueWithEmail;
+
+  /// No description provided for @continueWithPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with phone'**
+  String get continueWithPhone;
+
+  /// No description provided for @emailLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get emailLabel;
+
+  /// No description provided for @phoneLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number'**
+  String get phoneLabel;
+
+  /// No description provided for @phoneHint.
+  ///
+  /// In en, this message translates to:
+  /// **'+84… or 09…'**
+  String get phoneHint;
+
+  /// No description provided for @passwordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get passwordLabel;
+
+  /// No description provided for @confirmPasswordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password'**
+  String get confirmPasswordLabel;
+
+  /// No description provided for @sendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Send code'**
+  String get sendCode;
+
+  /// No description provided for @enterCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter code'**
+  String get enterCode;
+
+  /// No description provided for @verifyCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get verifyCode;
+
+  /// No description provided for @resendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend code'**
+  String get resendCode;
+
+  /// No description provided for @resendCodeIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend in {seconds}s'**
+  String resendCodeIn(int seconds);
+
+  /// No description provided for @otpSentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Code sent to {destination}'**
+  String otpSentTo(String destination);
+
+  /// No description provided for @invalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email'**
+  String get invalidEmail;
+
+  /// No description provided for @invalidPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid phone with country code'**
+  String get invalidPhone;
+
+  /// No description provided for @invalidPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters with letters and numbers'**
+  String get invalidPassword;
+
+  /// No description provided for @passwordMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match'**
+  String get passwordMismatch;
+
+  /// No description provided for @invalidOtp.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the 6-digit code'**
+  String get invalidOtp;
+
+  /// No description provided for @authErrorWrongCredentials.
+  ///
+  /// In en, this message translates to:
+  /// **'Email or password is incorrect'**
+  String get authErrorWrongCredentials;
+
+  /// No description provided for @authErrorInvalidOtp.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect or expired code'**
+  String get authErrorInvalidOtp;
+
+  /// No description provided for @authErrorNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Network error. Try again.'**
+  String get authErrorNetwork;
+
+  /// No description provided for @authErrorCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign-in cancelled'**
+  String get authErrorCancelled;
+
+  /// No description provided for @authErrorFacebook.
+  ///
+  /// In en, this message translates to:
+  /// **'Facebook sign-in failed. Check app setup.'**
+  String get authErrorFacebook;
+
+  /// No description provided for @authErrorNotConfigured.
+  ///
+  /// In en, this message translates to:
+  /// **'Firebase is not configured yet. See auth SETUP.'**
+  String get authErrorNotConfigured;
+
+  /// No description provided for @authErrorUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Try again.'**
+  String get authErrorUnknown;
+
+  /// No description provided for @authErrorProviderDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'This sign-in method is not enabled in Firebase.'**
+  String get authErrorProviderDisabled;
+
+  /// No description provided for @authErrorEmailInUse.
+  ///
+  /// In en, this message translates to:
+  /// **'This email already has an account. Please sign in.'**
+  String get authErrorEmailInUse;
+
+  /// No description provided for @authErrorTooManyRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many attempts. Wait a moment and try again.'**
+  String get authErrorTooManyRequests;
+
+  /// No description provided for @authErrorPopupBlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'The browser blocked the sign-in popup. Allow popups.'**
+  String get authErrorPopupBlocked;
+
+  /// No description provided for @authErrorDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save the verification code. Check Firestore.'**
+  String get authErrorDatabase;
+
+  /// No description provided for @authEmailSignInTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with email'**
+  String get authEmailSignInTitle;
+
+  /// No description provided for @authEmailSignUpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get authEmailSignUpTitle;
+
+  /// No description provided for @authPhoneTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone sign-in'**
+  String get authPhoneTitle;
+
+  /// No description provided for @authOtpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter verification code'**
+  String get authOtpTitle;
+
+  /// No description provided for @noAccountSignUp.
+  ///
+  /// In en, this message translates to:
+  /// **'No account? Sign up'**
+  String get noAccountSignUp;
+
+  /// No description provided for @haveAccountSignIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Have an account? Sign in'**
+  String get haveAccountSignIn;
+
+  /// No description provided for @playAsGuest.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue as guest'**
+  String get playAsGuest;
+
+  /// No description provided for @debugOtpHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Debug code: {code}'**
+  String debugOtpHint(String code);
 }
 
 class _AppLocalizationsDelegate

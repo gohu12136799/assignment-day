@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../auth/auth_scope.dart';
 import '../l10n/app_localizations.dart';
 import '../theme/app_colors.dart';
 import '../widgets/brain_rush_title.dart';
 import '../widgets/menu_row.dart';
+import 'auth/auth_hub_screen.dart';
 import 'settings_screen.dart';
 import 'topic_select_screen.dart';
 
@@ -17,9 +19,18 @@ class HomeScreen extends StatelessWidget {
     ).push(MaterialPageRoute<void>(builder: (_) => const TopicSelectScreen()));
   }
 
+  // trên Home (home_screen.dart), bấm vào chip người chơi khi chưa đăng nhập thì mở AuthHubScreen.
+  void _openAuth(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute<void>(builder: (_) => const AuthHubScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final auth = AuthScope.of(context);
+    final name = auth.displayName(l10n.playerName);
+    final photoUrl = auth.photoUrl;
 
     return Scaffold(
       body: Container(
@@ -53,73 +64,89 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 24),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 10,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.cardBg.withValues(alpha: 0.5),
+                    Material(
+                      color: Colors.transparent,
+                      child: InkWell(
                         borderRadius: BorderRadius.circular(100),
-                        border: Border.all(color: Colors.white24),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x66000000),
-                            offset: Offset(2, 4),
-                            blurRadius: 10,
+                        onTap: auth.isSignedIn
+                            ? null
+                            : () => _openAuth(context),
+                        child: Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 10,
                           ),
-                        ],
-                      ),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 24,
-                            backgroundColor: AppColors.yellow,
-                            child: Icon(
-                              Icons.person,
-                              color: AppColors.bgBlueDeep,
-                            ),
+                          decoration: BoxDecoration(
+                            color: AppColors.cardBg.withValues(alpha: 0.5),
+                            borderRadius: BorderRadius.circular(100),
+                            border: Border.all(color: Colors.white24),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x66000000),
+                                offset: Offset(2, 4),
+                                blurRadius: 10,
+                              ),
+                            ],
                           ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  l10n.playerName,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 16,
-                                  ),
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 24,
+                                backgroundColor: AppColors.yellow,
+                                backgroundImage: photoUrl != null
+                                    ? NetworkImage(photoUrl)
+                                    : null,
+                                child: photoUrl == null
+                                    ? const Icon(
+                                        Icons.person,
+                                        color: AppColors.bgBlueDeep,
+                                      )
+                                    : null,
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      name,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      auth.isSignedIn
+                                          ? l10n.levelLabel
+                                          : l10n.logIn,
+                                      style: const TextStyle(
+                                        color: Colors.white70,
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  l10n.levelLabel,
-                                  style: const TextStyle(
-                                    color: Colors.white70,
-                                    fontSize: 13,
-                                  ),
+                              ),
+                              const Icon(
+                                Icons.star_rounded,
+                                color: AppColors.yellow,
+                                size: 22,
+                              ),
+                              const SizedBox(width: 4),
+                              const Text(
+                                '0',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          const Icon(
-                            Icons.star_rounded,
-                            color: AppColors.yellow,
-                            size: 22,
-                          ),
-                          const SizedBox(width: 4),
-                          const Text(
-                            '0',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                     const SizedBox(height: 24),

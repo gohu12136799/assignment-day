@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "791974031427",
+    "project_id": "brain-rush-191f7",
+    "storage_bucket": "brain-rush-191f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791974031427:android:eaff97963e9d3ff6a1a4f6",
+        "android_client_info": {
+          "package_name": "com.huong.brainrush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791974031427-f7avi734dsurbpk3pid4qirn9688h1u8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.huong.brainrush",
+            "certificate_hash": "5114d5e230d767c6c263e79fab95e2a97493dffe"
+          }
+        },
+        {
+          "client_id": "791974031427-1qjg4s4635nosvqemmopoqo5sqg7v8mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOp0T9_OtcMvnDF3RmICyRUbhN8E64v9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791974031427-1qjg4s4635nosvqemmopoqo5sqg7v8mm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791974031427-tpipriks0giqjb36ej07ui7oi2rg090u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.huong.brainrush"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

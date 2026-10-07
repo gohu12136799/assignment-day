@@ -1,4 +1,4 @@
-package com.huong.assignmentday.assignment_day
+package com.huong.brainrush
 
 import io.flutter.embedding.android.FlutterActivity
 

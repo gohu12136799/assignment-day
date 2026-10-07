@@ -189,4 +189,149 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get logOut => 'Đăng xuất';
+
+  @override
+  String get logIn => 'Đăng nhập';
+
+  @override
+  String get signUp => 'Đăng ký';
+
+  @override
+  String get authWelcomeTitle => 'Chào mừng đến Brain Rush';
+
+  @override
+  String get authWelcomeSubtitle =>
+      'Đăng nhập để lưu tiến trình, hoặc chơi khách.';
+
+  @override
+  String get continueWithGoogle => 'Tiếp tục với Google';
+
+  @override
+  String get continueWithFacebook => 'Tiếp tục với Facebook';
+
+  @override
+  String get continueWithEmail => 'Tiếp tục với email';
+
+  @override
+  String get continueWithPhone => 'Tiếp tục với số điện thoại';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get phoneLabel => 'Số điện thoại';
+
+  @override
+  String get phoneHint => '+84… hoặc 09…';
+
+  @override
+  String get passwordLabel => 'Mật khẩu';
+
+  @override
+  String get confirmPasswordLabel => 'Xác nhận mật khẩu';
+
+  @override
+  String get sendCode => 'Gửi mã';
+
+  @override
+  String get enterCode => 'Nhập mã';
+
+  @override
+  String get verifyCode => 'Xác minh';
+
+  @override
+  String get resendCode => 'Gửi lại mã';
+
+  @override
+  String resendCodeIn(int seconds) {
+    return 'Gửi lại sau $seconds giây';
+  }
+
+  @override
+  String otpSentTo(String destination) {
+    return 'Đã gửi mã tới $destination';
+  }
+
+  @override
+  String get invalidEmail => 'Email không hợp lệ';
+
+  @override
+  String get invalidPhone => 'Nhập SĐT kèm mã quốc gia';
+
+  @override
+  String get invalidPassword => 'Tối thiểu 8 ký tự, có chữ và số';
+
+  @override
+  String get passwordMismatch => 'Mật khẩu không khớp';
+
+  @override
+  String get invalidOtp => 'Nhập mã 6 chữ số';
+
+  @override
+  String get authErrorWrongCredentials => 'Email hoặc mật khẩu không đúng';
+
+  @override
+  String get authErrorInvalidOtp => 'Mã sai hoặc đã hết hạn';
+
+  @override
+  String get authErrorNetwork => 'Lỗi mạng. Thử lại.';
+
+  @override
+  String get authErrorCancelled => 'Đã hủy đăng nhập';
+
+  @override
+  String get authErrorFacebook =>
+      'Đăng nhập Facebook thất bại. Kiểm tra cấu hình.';
+
+  @override
+  String get authErrorNotConfigured =>
+      'Chưa cấu hình Firebase. Xem auth SETUP.';
+
+  @override
+  String get authErrorUnknown => 'Có lỗi xảy ra. Thử lại.';
+
+  @override
+  String get authErrorProviderDisabled =>
+      'Cách đăng nhập này chưa được bật trên Firebase.';
+
+  @override
+  String get authErrorEmailInUse => 'Email này đã có tài khoản. Hãy đăng nhập.';
+
+  @override
+  String get authErrorTooManyRequests =>
+      'Thử quá nhiều lần. Đợi một lúc rồi thử lại.';
+
+  @override
+  String get authErrorPopupBlocked =>
+      'Trình duyệt chặn cửa sổ đăng nhập. Hãy cho phép popup.';
+
+  @override
+  String get authErrorDatabase =>
+      'Không lưu được mã xác thực. Kiểm tra Firestore.';
+
+  @override
+  String get authEmailSignInTitle => 'Đăng nhập bằng email';
+
+  @override
+  String get authEmailSignUpTitle => 'Tạo tài khoản';
+
+  @override
+  String get authPhoneTitle => 'Đăng nhập bằng SĐT';
+
+  @override
+  String get authOtpTitle => 'Nhập mã xác thực';
+
+  @override
+  String get noAccountSignUp => 'Chưa có tài khoản? Đăng ký';
+
+  @override
+  String get haveAccountSignIn => 'Đã có tài khoản? Đăng nhập';
+
+  @override
+  String get playAsGuest => 'Tiếp tục chơi khách';
+
+  @override
+  String debugOtpHint(String code) {
+    return 'Mã debug: $code';
+  }
 }

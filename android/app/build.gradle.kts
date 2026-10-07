@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.huong.assignmentday.assignment_day"
+    namespace = "com.huong.brainrush"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -16,10 +16,10 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.huong.assignmentday.assignment_day"
+        applicationId = "com.huong.brainrush"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdk = 24
         targetSdk = flutter.targetSdkVersion
         // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
         // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)
@@ -46,4 +46,9 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+// Chỉ bật khi đã thêm google-services.json (xem .cursor/skills/auth/SETUP.md).
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
 }

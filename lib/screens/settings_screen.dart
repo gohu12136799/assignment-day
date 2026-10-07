@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../auth/auth_scope.dart';
 import '../l10n/app_localizations.dart';
 import '../locale_controller.dart';
 import '../theme/app_colors.dart';
+import 'auth/auth_hub_screen.dart';
 
 /// Cài đặt. Chỉ đổi ngôn ngữ có tác dụng. Các mục khác là giao diện.
 class SettingsScreen extends StatefulWidget {
@@ -77,6 +79,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final l10n = AppLocalizations.of(context)!;
     final locale = LocaleScope.of(context);
     final languageName = locale.isVietnamese ? l10n.vietnamese : l10n.english;
+
+    final auth = AuthScope.of(context);
+    final signedIn = auth.isSignedIn;
 
     return Scaffold(
       backgroundColor: AppColors.bgLight,
@@ -159,20 +164,37 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ]),
           const SizedBox(height: 24),
           OutlinedButton(
-            onPressed: _comingSoon,
+            onPressed: () async {
+              if (signedIn) {
+                await auth.signOut();
+                if (context.mounted) Navigator.of(context).pop();
+                return;
+              }
+              await Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const AuthHubScreen(),
+                ),
+              );
+            },
             style: OutlinedButton.styleFrom(
-              foregroundColor: AppColors.redIconGradient.first,
-              backgroundColor: AppColors.redIconGradient.first.withValues(
-                alpha: 0.12,
+              foregroundColor: signedIn
+                  ? AppColors.redIconGradient.first
+                  : AppColors.bgBlue,
+              backgroundColor: signedIn
+                  ? AppColors.redIconGradient.first.withValues(alpha: 0.12)
+                  : AppColors.bgBlue.withValues(alpha: 0.08),
+              side: BorderSide(
+                color: signedIn
+                    ? AppColors.redIconGradient.first
+                    : AppColors.bgBlue,
               ),
-              side: BorderSide(color: AppColors.redIconGradient.first),
               minimumSize: const Size.fromHeight(60),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
             child: Text(
-              l10n.logOut,
+              signedIn ? l10n.logOut : l10n.logIn,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
           ),

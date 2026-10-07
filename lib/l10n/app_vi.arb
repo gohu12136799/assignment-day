@@ -84,5 +84,64 @@
   "guide": "Hướng dẫn",
   "rateApp": "Đánh giá ứng dụng",
   "contact": "Liên hệ",
-  "logOut": "Đăng xuất"
+  "logOut": "Đăng xuất",
+  "logIn": "Đăng nhập",
+  "signUp": "Đăng ký",
+  "authWelcomeTitle": "Chào mừng đến Brain Rush",
+  "authWelcomeSubtitle": "Đăng nhập để lưu tiến trình, hoặc chơi khách.",
+  "continueWithGoogle": "Tiếp tục với Google",
+  "continueWithFacebook": "Tiếp tục với Facebook",
+  "continueWithEmail": "Tiếp tục với email",
+  "continueWithPhone": "Tiếp tục với số điện thoại",
+  "emailLabel": "Email",
+  "phoneLabel": "Số điện thoại",
+  "phoneHint": "+84… hoặc 09…",
+  "passwordLabel": "Mật khẩu",
+  "confirmPasswordLabel": "Xác nhận mật khẩu",
+  "sendCode": "Gửi mã",
+  "enterCode": "Nhập mã",
+  "verifyCode": "Xác minh",
+  "resendCode": "Gửi lại mã",
+  "resendCodeIn": "Gửi lại sau {seconds} giây",
+  "@resendCodeIn": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+  "otpSentTo": "Đã gửi mã tới {destination}",
+  "@otpSentTo": {
+    "placeholders": {
+      "destination": { "type": "String" }
+    }
+  },
+  "invalidEmail": "Email không hợp lệ",
+  "invalidPhone": "Nhập SĐT kèm mã quốc gia",
+  "invalidPassword": "Tối thiểu 8 ký tự, có chữ và số",
+  "passwordMismatch": "Mật khẩu không khớp",
+  "invalidOtp": "Nhập mã 6 chữ số",
+  "authErrorWrongCredentials": "Email hoặc mật khẩu không đúng",
+  "authErrorInvalidOtp": "Mã sai hoặc đã hết hạn",
+  "authErrorNetwork": "Lỗi mạng. Thử lại.",
+  "authErrorCancelled": "Đã hủy đăng nhập",
+  "authErrorFacebook": "Đăng nhập Facebook thất bại. Kiểm tra cấu hình.",
+  "authErrorNotConfigured": "Chưa cấu hình Firebase. Xem auth SETUP.",
+  "authErrorUnknown": "Có lỗi xảy ra. Thử lại.",
+  "authErrorProviderDisabled": "Cách đăng nhập này chưa được bật trên Firebase.",
+  "authErrorEmailInUse": "Email này đã có tài khoản. Hãy đăng nhập.",
+  "authErrorTooManyRequests": "Thử quá nhiều lần. Đợi một lúc rồi thử lại.",
+  "authErrorPopupBlocked": "Trình duyệt chặn cửa sổ đăng nhập. Hãy cho phép popup.",
+  "authErrorDatabase": "Không lưu được mã xác thực. Kiểm tra Firestore.",
+  "authEmailSignInTitle": "Đăng nhập bằng email",
+  "authEmailSignUpTitle": "Tạo tài khoản",
+  "authPhoneTitle": "Đăng nhập bằng SĐT",
+  "authOtpTitle": "Nhập mã xác thực",
+  "noAccountSignUp": "Chưa có tài khoản? Đăng ký",
+  "haveAccountSignIn": "Đã có tài khoản? Đăng nhập",
+  "playAsGuest": "Tiếp tục chơi khách",
+  "debugOtpHint": "Mã debug: {code}",
+  "@debugOtpHint": {
+    "placeholders": {
+      "code": { "type": "String" }
+    }
+  }
 }

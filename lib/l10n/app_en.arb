@@ -84,5 +84,64 @@
   "guide": "Guide",
   "rateApp": "Rate the app",
   "contact": "Contact",
-  "logOut": "Log out"
+  "logOut": "Log out",
+  "logIn": "Log in",
+  "signUp": "Sign up",
+  "authWelcomeTitle": "Welcome to Brain Rush",
+  "authWelcomeSubtitle": "Sign in to save progress, or play as a guest.",
+  "continueWithGoogle": "Continue with Google",
+  "continueWithFacebook": "Continue with Facebook",
+  "continueWithEmail": "Continue with email",
+  "continueWithPhone": "Continue with phone",
+  "emailLabel": "Email",
+  "phoneLabel": "Phone number",
+  "phoneHint": "+84… or 09…",
+  "passwordLabel": "Password",
+  "confirmPasswordLabel": "Confirm password",
+  "sendCode": "Send code",
+  "enterCode": "Enter code",
+  "verifyCode": "Verify",
+  "resendCode": "Resend code",
+  "resendCodeIn": "Resend in {seconds}s",
+  "@resendCodeIn": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+  "otpSentTo": "Code sent to {destination}",
+  "@otpSentTo": {
+    "placeholders": {
+      "destination": { "type": "String" }
+    }
+  },
+  "invalidEmail": "Enter a valid email",
+  "invalidPhone": "Enter a valid phone with country code",
+  "invalidPassword": "At least 8 characters with letters and numbers",
+  "passwordMismatch": "Passwords do not match",
+  "invalidOtp": "Enter the 6-digit code",
+  "authErrorWrongCredentials": "Email or password is incorrect",
+  "authErrorInvalidOtp": "Incorrect or expired code",
+  "authErrorNetwork": "Network error. Try again.",
+  "authErrorCancelled": "Sign-in cancelled",
+  "authErrorFacebook": "Facebook sign-in failed. Check app setup.",
+  "authErrorNotConfigured": "Firebase is not configured yet. See auth SETUP.",
+  "authErrorUnknown": "Something went wrong. Try again.",
+  "authErrorProviderDisabled": "This sign-in method is not enabled in Firebase.",
+  "authErrorEmailInUse": "This email already has an account. Please sign in.",
+  "authErrorTooManyRequests": "Too many attempts. Wait a moment and try again.",
+  "authErrorPopupBlocked": "The browser blocked the sign-in popup. Allow popups.",
+  "authErrorDatabase": "Could not save the verification code. Check Firestore.",
+  "authEmailSignInTitle": "Sign in with email",
+  "authEmailSignUpTitle": "Create account",
+  "authPhoneTitle": "Phone sign-in",
+  "authOtpTitle": "Enter verification code",
+  "noAccountSignUp": "No account? Sign up",
+  "haveAccountSignIn": "Have an account? Sign in",
+  "playAsGuest": "Continue as guest",
+  "debugOtpHint": "Debug code: {code}",
+  "@debugOtpHint": {
+    "placeholders": {
+      "code": { "type": "String" }
+    }
+  }
 }
