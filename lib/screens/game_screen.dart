@@ -14,9 +14,16 @@ import 'result_screen.dart';
 /// Màn test / chơi.
 /// Học: play/pause điều khiển Timer; progress theo câu hỏi hiện tại.
 class GameScreen extends StatefulWidget {
-  const GameScreen({super.key, this.topic = PlayTopic.mixed});
+  const GameScreen({
+    super.key,
+    this.topic = PlayTopic.mixed,
+    this.classTest = false,
+  });
 
   final PlayTopic topic;
+
+  /// Bài kiểm tra trên lớp: xong thì pop điểm thang 10, không mở ResultScreen.
+  final bool classTest;
 
   @override
   State<GameScreen> createState() => _GameScreenState();
@@ -26,6 +33,7 @@ class _GameScreenState extends State<GameScreen> {
   late final GameSession _session;
   Timer? _timer;
   final Stopwatch _elapsed = Stopwatch();
+  final Color _background = AppColors.randomClassroomWall();
 
   bool get _warning => _session.secondsLeft <= 1;
 
@@ -81,6 +89,10 @@ class _GameScreenState extends State<GameScreen> {
     _timer?.cancel();
     _elapsed.stop();
     if (!mounted) return;
+    if (widget.classTest) {
+      Navigator.of(context).pop(_session.gradeOutOfTen());
+      return;
+    }
     final topic = widget.topic;
     final elapsed = _elapsed.elapsed;
     Navigator.of(context).pushReplacement(
@@ -92,9 +104,7 @@ class _GameScreenState extends State<GameScreen> {
           elapsed: elapsed,
           onReplay: (context) {
             Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute<void>(
-                builder: (_) => GameScreen(topic: topic),
-              ),
+              MaterialPageRoute<void>(builder: (_) => GameScreen(topic: topic)),
               (_) => false,
             );
           },
@@ -116,7 +126,7 @@ class _GameScreenState extends State<GameScreen> {
     final paused = _session.paused;
 
     return Scaffold(
-      backgroundColor: AppColors.bgLight,
+      backgroundColor: _background,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
@@ -221,53 +231,63 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   Widget _questionCard(String prompt, AppLocalizations l10n) {
-    return Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: AppColors.borderGray),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color(0x22000000),
-                      offset: Offset(0, 3),
-                      blurRadius: 8,
-                    ),
-                  ],
-                ),
-                child: Column(
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: AppColors.chalkFrame,
+        borderRadius: BorderRadius.circular(18),
+        boxShadow: const [
+          BoxShadow(
+            color: Color(0x22000000),
+            offset: Offset(0, 3),
+            blurRadius: 8,
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: AppColors.chalkboard,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 18, 16, 22),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.psychology_alt_rounded,
-                          color: AppColors.yellow,
-                          size: 28,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          _badgeLabel(l10n),
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16,
-                            color: Colors.black87,
-                          ),
-                        ),
-                      ],
+                    const Icon(
+                      Icons.psychology_alt_rounded,
+                      color: AppColors.schoolCream,
+                      size: 28,
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(width: 8),
                     Text(
-                      prompt,
-                      textAlign: TextAlign.center,
+                      _badgeLabel(l10n),
                       style: const TextStyle(
-                        fontSize: 28,
                         fontWeight: FontWeight.w700,
-                        color: Colors.black,
+                        fontSize: 16,
+                        color: AppColors.schoolCream,
                       ),
                     ),
                   ],
                 ),
+                const SizedBox(height: 20),
+                Text(
+                  prompt,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.schoolCream,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -296,7 +316,6 @@ class _AnswerColumn extends StatelessWidget {
     required this.selectedIndex,
     required this.onSelect,
   });
-
 
   final List<String> options;
   final bool paused;

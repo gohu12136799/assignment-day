@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 /// Màu dùng chung toàn app.
@@ -21,6 +23,29 @@ abstract final class AppColors {
     answerPurple,
   ];
   static const bgLight = Color.fromARGB(255, 245, 249, 249);
+
+  /// Nền kem của ảnh cô giáo chính diện, để ảnh liền với màn.
+  static const schoolCream = Color(0xFFFCF1D5);
+
+  /// Bảng xanh viết phấn, khung gỗ.
+  static const chalkboard = Color(0xFF1E7A46);
+  static const chalkFrame = Color(0xFF8D5A2B);
+
+  /// Tường lớp mầm non khi làm bài. Nhạt để thẻ trắng và chữ đen còn nổi.
+  static const classroomBlue = Color(0xFF9FD6FF);
+  static const classroomYellow = Color(0xFFFFF09A);
+  static const classroomPink = Color(0xFFFFC2DD);
+  static const classroomWalls = <Color>[
+    classroomBlue,
+    classroomYellow,
+    classroomPink,
+  ];
+
+  /// Một màu tường, chọn lúc mở bài. Không gọi trong build kẻo nền nhảy.
+  static Color randomClassroomWall([Random? random]) {
+    final roll = random ?? Random();
+    return classroomWalls[roll.nextInt(classroomWalls.length)];
+  }
 
   // --- Gradient toả từ giữa: đậm tâm → nhạt ra ngoài ---
   static const yellowGradient = <Color>[Color(0xFFFF9800), Color(0xFFFFEB3B)];

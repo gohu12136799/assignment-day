@@ -22,10 +22,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get playerName => 'Người chơi';
 
   @override
+  String get studentGrade => 'Lớp 5';
+
+  @override
   String get levelLabel => 'Level 1';
 
   @override
   String get startPlay => 'Bắt đầu chơi';
+
+  @override
+  String get enterClass => 'Vào lớp';
 
   @override
   String get chooseTopic => 'Chọn chủ đề';
@@ -191,6 +197,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get logOut => 'Đăng xuất';
 
   @override
+  String get leaveClass => 'Rời lớp';
+
+  @override
   String get logIn => 'Đăng nhập';
 
   @override
@@ -333,5 +342,334 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String debugOtpHint(String code) {
     return 'Mã debug: $code';
+  }
+
+  @override
+  String get schoolName => 'Trường học Hoa Sen';
+
+  @override
+  String get schoolNameTop => 'TRƯỜNG HỌC';
+
+  @override
+  String get schoolNameBottom => 'HOA SEN';
+
+  @override
+  String get schoolTagline => 'Nơi ươm mầm non';
+
+  @override
+  String get freePractice => 'Luyện tập tự do';
+
+  @override
+  String get classMath => 'Lớp Toán';
+
+  @override
+  String get classLogic => 'Lớp Logic';
+
+  @override
+  String get classEnglish => 'Lớp Tiếng Anh';
+
+  @override
+  String teacherName(String name) {
+    return 'Cô $name';
+  }
+
+  @override
+  String get homeroomTeacher => 'Giáo viên chủ nhiệm';
+
+  @override
+  String schoolHours(String open, String close) {
+    return 'Giờ học $open – $close';
+  }
+
+  @override
+  String get schoolOpenNow => 'Đang trong giờ học, vào lớp điểm danh nhé!';
+
+  @override
+  String schoolClosedNow(String open, String close) {
+    return 'Ngoài giờ học. Lớp chỉ mở từ $open đến $close.';
+  }
+
+  @override
+  String classSize(int count, int max) {
+    return 'Sĩ số $count/$max';
+  }
+
+  @override
+  String studentYou(String name) {
+    return '$name (bạn)';
+  }
+
+  @override
+  String presentAt(String time) {
+    return 'Có mặt $time';
+  }
+
+  @override
+  String get notArrived => 'Chưa đến';
+
+  @override
+  String get notCheckedIn => 'Chưa điểm danh';
+
+  @override
+  String get checkedInNoTest => 'Đã điểm danh, chưa làm bài';
+
+  @override
+  String get checkIn => 'Điểm danh';
+
+  @override
+  String get startTest => 'Làm bài kiểm tra';
+
+  @override
+  String get classRules =>
+      'Vào lớp cô sẽ cho 1 bài kiểm tra. Dưới 5 điểm bị cô khẽ tay, trên 9 điểm được cô khen. Thoát giữa chừng tính 0 điểm.';
+
+  @override
+  String todayGrade(String grade) {
+    return 'Hôm nay: $grade điểm';
+  }
+
+  @override
+  String get testDoneToday =>
+      'Hôm nay bạn đã làm bài lớp này. Mai quay lại nhé!';
+
+  @override
+  String get seeTeacherComment => 'Xem lời cô';
+
+  @override
+  String get schoolClosedAction => 'Ngoài giờ học';
+
+  @override
+  String gradeOutOfTen(String grade) {
+    return '$grade/10';
+  }
+
+  @override
+  String get verdictPraiseTitle => 'Giỏi quá! Cô khen con!';
+
+  @override
+  String get verdictPraiseBody =>
+      'Điểm trên 9, con được cô tuyên dương trước lớp.';
+
+  @override
+  String get verdictPunishTitle => 'Ối! Bị cô khẽ tay rồi!';
+
+  @override
+  String get verdictPunishBody => 'Cô phạt em 5 roi.';
+
+  @override
+  String scoreResult(String name, String grade) {
+    return 'Bạn $name được $grade điểm';
+  }
+
+  @override
+  String get goToPunish => 'Đi tới mục phạt';
+
+  @override
+  String get verdictEncourageTitle => 'Khá lắm, cố thêm chút nữa!';
+
+  @override
+  String get verdictEncourageBody => 'Cô tin lần sau con sẽ được trên 9 điểm.';
+
+  @override
+  String get backToClass => 'Về lớp';
+
+  @override
+  String get enrollGreeting => 'Chào mẹ, mẹ muốn đăng ký lớp nào cho con?';
+
+  @override
+  String get enrollChooseClass => 'Chọn lớp cho con';
+
+  @override
+  String get enrollAskName => 'Con tên là gì ạ?';
+
+  @override
+  String get enrollNameTitle => 'Tên của con';
+
+  @override
+  String get enrollWriteName => 'Ghi tên';
+
+  @override
+  String get enrollNameHint => 'Nhập tên con';
+
+  @override
+  String get enrollNameConfirm => 'Đăng ký';
+
+  @override
+  String get enrollNameEmpty => 'Mẹ cho cô biết tên con nhé.';
+
+  @override
+  String enrollWelcome(String name, String className) {
+    return 'Cô đưa $name vào $className nhé!';
+  }
+
+  @override
+  String get myClass => 'Lớp của con';
+
+  @override
+  String get classNotEnrolled => 'Chưa đăng ký';
+
+  @override
+  String get classLockedHint => 'Con chưa đăng ký lớp này.';
+
+  @override
+  String get classRulesMale =>
+      'Vào lớp thầy sẽ cho 1 bài kiểm tra. Dưới 5 điểm bị thầy khẽ tay, trên 9 điểm được thầy khen. Thoát giữa chừng tính 0 điểm.';
+
+  @override
+  String get teacherHung => 'Thầy Hùng';
+
+  @override
+  String get teacherNga => 'Cô Nga';
+
+  @override
+  String get teacherHoa => 'Cô Hoa';
+
+  @override
+  String get classAskName => 'Em tên là gì?';
+
+  @override
+  String get classAnswer => 'Trả lời';
+
+  @override
+  String classWelcomeMale(String name) {
+    return 'Các bạn chào đón $name nhé. Thầy dẫn em vào ghế.';
+  }
+
+  @override
+  String classWelcomeFemale(String name) {
+    return 'Các bạn chào đón $name nhé. Cô dẫn em vào ghế.';
+  }
+
+  @override
+  String get classStartTest => 'Bắt đầu kiểm tra 15 phút nhé.';
+
+  @override
+  String get classStartButton => 'Làm bài';
+
+  @override
+  String get verdictPraiseTitleMale => 'Giỏi quá! Thầy khen em!';
+
+  @override
+  String get verdictPraiseBodyMale =>
+      'Điểm trên 9, em được thầy tuyên dương trước lớp.';
+
+  @override
+  String get verdictPunishTitleMale => 'Ối! Bị thầy khẽ tay rồi!';
+
+  @override
+  String get verdictPunishBodyMale => 'Thầy phạt em 5 roi.';
+
+  @override
+  String get verdictEncourageTitleMale => 'Khá lắm, cố thêm chút nữa!';
+
+  @override
+  String get verdictEncourageBodyMale =>
+      'Thầy tin lần sau em sẽ được trên 9 điểm.';
+
+  @override
+  String get candyCheckInGift => 'Đi học đều, em được tặng 1 cái kẹo!';
+
+  @override
+  String get candyPraiseGift => 'Trên 9 điểm, em được tặng 2 cái kẹo!';
+
+  @override
+  String candyCount(int count) {
+    return 'Em đang có $count cái kẹo.';
+  }
+
+  @override
+  String get candyAccept => 'Nhận kẹo';
+
+  @override
+  String get exchangeOutfit => 'Đổi bộ đồ';
+
+  @override
+  String get outfitUniform => 'Đồng phục';
+
+  @override
+  String get outfitSunflower => 'Áo hoa hướng dương';
+
+  @override
+  String get outfitSailor => 'Áo thủy thủ';
+
+  @override
+  String get outfitPrice => '10 kẹo';
+
+  @override
+  String get outfitWear => 'Mặc bộ này';
+
+  @override
+  String get outfitWearing => 'Đang mặc';
+
+  @override
+  String outfitShort(int count) {
+    return 'Còn thiếu $count kẹo.';
+  }
+
+  @override
+  String get reactionTitle => 'Em phản ứng thế nào?';
+
+  @override
+  String get reactionScared => 'Sợ hãi';
+
+  @override
+  String get reactionHappy => 'Vui vẻ';
+
+  @override
+  String get reactionCalm => 'Lì lợm';
+
+  @override
+  String get reactionTeaseMale => 'Chọc thầy';
+
+  @override
+  String get reactionTeaseFemale => 'Chọc cô';
+
+  @override
+  String get reactionTeaseHintMale => 'Em muốn nói gì với thầy?';
+
+  @override
+  String get reactionTeaseHintFemale => 'Em muốn nói gì với cô?';
+
+  @override
+  String get reactionSendMale => 'Nói với thầy';
+
+  @override
+  String get reactionSendFemale => 'Nói với cô';
+
+  @override
+  String get reactionEmpty => 'Em nhập một câu đã nhé.';
+
+  @override
+  String get reactionReplyScaredMale =>
+      'Thầy chỉ khẽ tay nhẹ thôi. Lần sau học thuộc là không sao.';
+
+  @override
+  String get reactionReplyScaredFemale =>
+      'Cô chỉ khẽ tay nhẹ thôi. Lần sau học thuộc là không sao.';
+
+  @override
+  String get reactionReplyHappyMale =>
+      'Em vui thế à? Về ôn bài cho thầy cười theo nhé.';
+
+  @override
+  String get reactionReplyHappyFemale =>
+      'Em vui thế à? Về ôn bài cho cô cười theo nhé.';
+
+  @override
+  String get reactionReplyCalmMale =>
+      'Em bình tĩnh ghê. Nhớ xem lại chỗ bị sai nhé.';
+
+  @override
+  String get reactionReplyCalmFemale =>
+      'Em bình tĩnh ghê. Nhớ xem lại chỗ bị sai nhé.';
+
+  @override
+  String reactionReplyTeaseMale(String line) {
+    return 'Thầy nghe em nói: \"$line\". Làm trên 9 điểm rồi hãy chọc tiếp nhé.';
+  }
+
+  @override
+  String reactionReplyTeaseFemale(String line) {
+    return 'Cô nghe em nói: \"$line\". Làm trên 9 điểm rồi hãy chọc tiếp nhé.';
   }
 }

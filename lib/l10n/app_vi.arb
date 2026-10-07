@@ -4,8 +4,10 @@
   "splashSubtitle": "Thử thách trí tuệ\nBứt phá giới hạn!",
   "loading": "Đang tải...",
   "playerName": "Người chơi",
+  "studentGrade": "Lớp 5",
   "levelLabel": "Level 1",
   "startPlay": "Bắt đầu chơi",
+  "enterClass": "Vào lớp",
   "chooseTopic": "Chọn chủ đề",
   "leaderboard": "Bảng xếp hạng",
   "achievements": "Thành tích",
@@ -85,6 +87,7 @@
   "rateApp": "Đánh giá ứng dụng",
   "contact": "Liên hệ",
   "logOut": "Đăng xuất",
+  "leaveClass": "Rời lớp",
   "logIn": "Đăng nhập",
   "signUp": "Đăng ký",
   "authWelcomeTitle": "Chào mừng đến Brain Rush",
@@ -142,6 +145,186 @@
   "@debugOtpHint": {
     "placeholders": {
       "code": { "type": "String" }
+    }
+  },
+  "schoolName": "Trường học Hoa Sen",
+  "schoolNameTop": "TRƯỜNG HỌC",
+  "schoolNameBottom": "HOA SEN",
+  "schoolTagline": "Nơi ươm mầm non",
+  "freePractice": "Luyện tập tự do",
+  "classMath": "Lớp Toán",
+  "classLogic": "Lớp Logic",
+  "classEnglish": "Lớp Tiếng Anh",
+  "teacherName": "Cô {name}",
+  "@teacherName": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "homeroomTeacher": "Giáo viên chủ nhiệm",
+  "schoolHours": "Giờ học {open} – {close}",
+  "@schoolHours": {
+    "placeholders": {
+      "open": { "type": "String" },
+      "close": { "type": "String" }
+    }
+  },
+  "schoolOpenNow": "Đang trong giờ học, vào lớp điểm danh nhé!",
+  "schoolClosedNow": "Ngoài giờ học. Lớp chỉ mở từ {open} đến {close}.",
+  "@schoolClosedNow": {
+    "placeholders": {
+      "open": { "type": "String" },
+      "close": { "type": "String" }
+    }
+  },
+  "classSize": "Sĩ số {count}/{max}",
+  "@classSize": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "studentYou": "{name} (bạn)",
+  "@studentYou": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "presentAt": "Có mặt {time}",
+  "@presentAt": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "notArrived": "Chưa đến",
+  "notCheckedIn": "Chưa điểm danh",
+  "checkedInNoTest": "Đã điểm danh, chưa làm bài",
+  "checkIn": "Điểm danh",
+  "startTest": "Làm bài kiểm tra",
+  "classRules": "Vào lớp cô sẽ cho 1 bài kiểm tra. Dưới 5 điểm bị cô khẽ tay, trên 9 điểm được cô khen. Thoát giữa chừng tính 0 điểm.",
+  "todayGrade": "Hôm nay: {grade} điểm",
+  "@todayGrade": {
+    "placeholders": {
+      "grade": { "type": "String" }
+    }
+  },
+  "testDoneToday": "Hôm nay bạn đã làm bài lớp này. Mai quay lại nhé!",
+  "seeTeacherComment": "Xem lời cô",
+  "schoolClosedAction": "Ngoài giờ học",
+  "gradeOutOfTen": "{grade}/10",
+  "@gradeOutOfTen": {
+    "placeholders": {
+      "grade": { "type": "String" }
+    }
+  },
+  "verdictPraiseTitle": "Giỏi quá! Cô khen con!",
+  "verdictPraiseBody": "Điểm trên 9, con được cô tuyên dương trước lớp.",
+  "verdictPunishTitle": "Ối! Bị cô khẽ tay rồi!",
+  "verdictPunishBody": "Cô phạt em 5 roi.",
+  "scoreResult": "Bạn {name} được {grade} điểm",
+  "@scoreResult": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "grade": { "type": "String" }
+    }
+  },
+  "goToPunish": "Đi tới mục phạt",
+  "verdictEncourageTitle": "Khá lắm, cố thêm chút nữa!",
+  "verdictEncourageBody": "Cô tin lần sau con sẽ được trên 9 điểm.",
+  "backToClass": "Về lớp",
+  "enrollGreeting": "Chào mẹ, mẹ muốn đăng ký lớp nào cho con?",
+  "enrollChooseClass": "Chọn lớp cho con",
+  "enrollAskName": "Con tên là gì ạ?",
+  "enrollNameTitle": "Tên của con",
+  "enrollWriteName": "Ghi tên",
+  "enrollNameHint": "Nhập tên con",
+  "enrollNameConfirm": "Đăng ký",
+  "enrollNameEmpty": "Mẹ cho cô biết tên con nhé.",
+  "enrollWelcome": "Cô đưa {name} vào {className} nhé!",
+  "@enrollWelcome": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "className": { "type": "String" }
+    }
+  },
+  "myClass": "Lớp của con",
+  "classNotEnrolled": "Chưa đăng ký",
+  "classLockedHint": "Con chưa đăng ký lớp này.",
+  "classRulesMale": "Vào lớp thầy sẽ cho 1 bài kiểm tra. Dưới 5 điểm bị thầy khẽ tay, trên 9 điểm được thầy khen. Thoát giữa chừng tính 0 điểm.",
+  "teacherHung": "Thầy Hùng",
+  "teacherNga": "Cô Nga",
+  "teacherHoa": "Cô Hoa",
+  "classAskName": "Em tên là gì?",
+  "classAnswer": "Trả lời",
+  "classWelcomeMale": "Các bạn chào đón {name} nhé. Thầy dẫn em vào ghế.",
+  "@classWelcomeMale": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "classWelcomeFemale": "Các bạn chào đón {name} nhé. Cô dẫn em vào ghế.",
+  "@classWelcomeFemale": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "classStartTest": "Bắt đầu kiểm tra 15 phút nhé.",
+  "classStartButton": "Làm bài",
+  "verdictPraiseTitleMale": "Giỏi quá! Thầy khen em!",
+  "verdictPraiseBodyMale": "Điểm trên 9, em được thầy tuyên dương trước lớp.",
+  "verdictPunishTitleMale": "Ối! Bị thầy khẽ tay rồi!",
+  "verdictPunishBodyMale": "Thầy phạt em 5 roi.",
+  "verdictEncourageTitleMale": "Khá lắm, cố thêm chút nữa!",
+  "verdictEncourageBodyMale": "Thầy tin lần sau em sẽ được trên 9 điểm.",
+  "candyCheckInGift": "Đi học đều, em được tặng 1 cái kẹo!",
+  "candyPraiseGift": "Trên 9 điểm, em được tặng 2 cái kẹo!",
+  "candyCount": "Em đang có {count} cái kẹo.",
+  "@candyCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "candyAccept": "Nhận kẹo",
+  "exchangeOutfit": "Đổi bộ đồ",
+  "outfitUniform": "Đồng phục",
+  "outfitSunflower": "Áo hoa hướng dương",
+  "outfitSailor": "Áo thủy thủ",
+  "outfitPrice": "10 kẹo",
+  "outfitWear": "Mặc bộ này",
+  "outfitWearing": "Đang mặc",
+  "outfitShort": "Còn thiếu {count} kẹo.",
+  "@outfitShort": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "reactionTitle": "Em phản ứng thế nào?",
+  "reactionScared": "Sợ hãi",
+  "reactionHappy": "Vui vẻ",
+  "reactionCalm": "Lì lợm",
+  "reactionTeaseMale": "Chọc thầy",
+  "reactionTeaseFemale": "Chọc cô",
+  "reactionTeaseHintMale": "Em muốn nói gì với thầy?",
+  "reactionTeaseHintFemale": "Em muốn nói gì với cô?",
+  "reactionSendMale": "Nói với thầy",
+  "reactionSendFemale": "Nói với cô",
+  "reactionEmpty": "Em nhập một câu đã nhé.",
+  "reactionReplyScaredMale": "Thầy chỉ khẽ tay nhẹ thôi. Lần sau học thuộc là không sao.",
+  "reactionReplyScaredFemale": "Cô chỉ khẽ tay nhẹ thôi. Lần sau học thuộc là không sao.",
+  "reactionReplyHappyMale": "Em vui thế à? Về ôn bài cho thầy cười theo nhé.",
+  "reactionReplyHappyFemale": "Em vui thế à? Về ôn bài cho cô cười theo nhé.",
+  "reactionReplyCalmMale": "Em bình tĩnh ghê. Nhớ xem lại chỗ bị sai nhé.",
+  "reactionReplyCalmFemale": "Em bình tĩnh ghê. Nhớ xem lại chỗ bị sai nhé.",
+  "reactionReplyTeaseMale": "Thầy nghe em nói: \"{line}\". Làm trên 9 điểm rồi hãy chọc tiếp nhé.",
+  "@reactionReplyTeaseMale": {
+    "placeholders": {
+      "line": { "type": "String" }
+    }
+  },
+  "reactionReplyTeaseFemale": "Cô nghe em nói: \"{line}\". Làm trên 9 điểm rồi hãy chọc tiếp nhé.",
+  "@reactionReplyTeaseFemale": {
+    "placeholders": {
+      "line": { "type": "String" }
     }
   }
 }

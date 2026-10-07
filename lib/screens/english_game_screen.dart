@@ -12,9 +12,12 @@ import 'result_screen.dart';
 
 /// Lượt Tiếng Anh: một đoạn sai, 30 giây, tap từ. Không báo đúng sai lúc chơi.
 class EnglishGameScreen extends StatefulWidget {
-  const EnglishGameScreen({super.key, this.session});
+  const EnglishGameScreen({super.key, this.session, this.classTest = false});
 
   final EnglishGameSession? session;
+
+  /// Bài kiểm tra trên lớp: xong thì pop điểm thang 10, không mở ResultScreen.
+  final bool classTest;
 
   @override
   State<EnglishGameScreen> createState() => _EnglishGameScreenState();
@@ -24,6 +27,7 @@ class _EnglishGameScreenState extends State<EnglishGameScreen> {
   late final EnglishGameSession _session;
   Timer? _timer;
   final Stopwatch _elapsed = Stopwatch();
+  final Color _background = AppColors.randomClassroomWall();
 
   bool get _warning => _session.secondsLeft <= 1;
 
@@ -60,6 +64,10 @@ class _EnglishGameScreenState extends State<EnglishGameScreen> {
     _timer?.cancel();
     _elapsed.stop();
     if (!mounted) return;
+    if (widget.classTest) {
+      Navigator.of(context).pop(_session.gradeOutOfTen());
+      return;
+    }
     final selected = Set<int>.from(_session.selected);
     final elapsed = _elapsed.elapsed;
     Navigator.of(context).pushReplacement(
@@ -102,7 +110,7 @@ class _EnglishGameScreenState extends State<EnglishGameScreen> {
     final elapsed = GameConstants.englishRoundSeconds - _session.secondsLeft;
 
     return Scaffold(
-      backgroundColor: AppColors.bgLight,
+      backgroundColor: _background,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),

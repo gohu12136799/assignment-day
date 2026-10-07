@@ -1,4 +1,5 @@
 import '../data/logic_questions.dart';
+import '../school/school_rules.dart';
 import 'game_constants.dart';
 import 'game_session.dart';
 
@@ -88,6 +89,16 @@ class LogicGameSession {
       for (var i = 0; i < questions.length; i++)
         i < _answers.length ? _answers[i] : null,
     ];
+  }
+
+  /// Thang 10 cho bài kiểm tra trên lớp. Chỉ gọi sau khi lượt kết thúc.
+  double gradeOutOfTen() {
+    final answers = choices();
+    var correct = 0;
+    for (var i = 0; i < questions.length; i++) {
+      if (answers[i] == questions[i].correctIndex) correct += 1;
+    }
+    return tenPointGrade(correct, questions.length);
   }
 
   bool _advance() {

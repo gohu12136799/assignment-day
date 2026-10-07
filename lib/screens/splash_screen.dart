@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../l10n/app_localizations.dart';
 import '../theme/app_colors.dart';
 import '../widgets/brain_rush_title.dart';
+import '../school/enrollment_store.dart';
 import 'home_screen.dart';
+import 'school/enrollment_screen.dart';
 
 /// Màn khởi động (Splash):
 /// - Hiện logo + tên game
@@ -39,13 +41,21 @@ class _SplashScreenState extends State<SplashScreen>
 
     // Khi animation xong → chuyển màn.
     _controller.addStatusListener((status) {
-      if (status == AnimationStatus.completed && mounted) {
-        // pushReplacement: thay Splash bằng Home (không quay lại Splash bằng nút Back).
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute<void>(builder: (_) => const HomeScreen()),
-        );
-      }
+      if (status == AnimationStatus.completed && mounted) _leave();
     });
+  }
+
+  /// Chưa đăng ký lớp thì gặp cô trước, rồi mới vào Home.
+  Future<void> _leave() async {
+    final enrolled = await EnrollmentStore().isComplete();
+    if (!mounted) return;
+    // pushReplacement: thay Splash (không quay lại Splash bằng nút Back).
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<void>(
+        builder: (_) =>
+            enrolled ? const HomeScreen() : const EnrollmentScreen(),
+      ),
+    );
   }
 
   @override
@@ -59,16 +69,17 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     // build() vẽ UI. Flutter gọi lại khi cần rebuild.
     return Scaffold(
-      // Nền splash full màn. Ảnh đã gồm mascot + sao, nên không chồng thêm.
+      // Nền splash full màn: Trường học Hoa Sen ở nửa trên, nửa dưới xanh đậm cho chữ.
       body: Container(
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
+          color: AppColors.bgBlueDeep,
           image: DecorationImage(
-            image: AssetImage('assets/images/bacground_splash.png'),
+            image: AssetImage('assets/images/splash_school.jpg'),
             fit: BoxFit.cover,
-            // Âm trục Y = lấy phần trên ảnh, não xích xuống để không bị cắt tia sét.
-            alignment: Alignment(0, -0.45),
+            // Bám mép trên để không cắt lá cờ và mái trường.
+            alignment: Alignment.topCenter,
           ),
         ),
         // SafeArea: tránh đè notch / thanh status bar.
@@ -77,8 +88,8 @@ class _SplashScreenState extends State<SplashScreen>
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               children: [
-                // Spacer trên chừa chỗ mascot đã vẽ sẵn trong ảnh nền.
-                const Spacer(flex: 5),
+                // Spacer trên chừa chỗ trường và các bạn học sinh trong ảnh nền.
+                const Spacer(flex: 7),
 
                 const BrainRushTitle(fontSize: 52, arcDegrees: 36, height: 160),
                 const SizedBox(height: 4),
@@ -95,7 +106,7 @@ class _SplashScreenState extends State<SplashScreen>
                   ),
                 ),
 
-                const Spacer(flex: 2),
+                const Spacer(flex: 1),
 
                 // --- LOADING BAR ---
                 // AnimatedBuilder lắng nghe _controller → mỗi frame value đổi là vẽ lại thanh.

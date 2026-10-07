@@ -1,6 +1,7 @@
 import '../data/questions.dart';
 import '../models/play_topic.dart';
 import '../models/question.dart';
+import '../school/school_rules.dart';
 import 'game_constants.dart';
 import 'math_question_generator.dart';
 
@@ -112,6 +113,14 @@ class GameSession {
       }
     }
     return score;
+  }
+
+  /// Thang 10 cho bài kiểm tra trên lớp. Chỉ gọi sau khi [roundEnd] đã có.
+  double gradeOutOfTen() {
+    if (roundEnd == null) {
+      throw StateError('gradeOutOfTen() only after the exam ends');
+    }
+    return tenPointGrade(correctCount, _questions.length);
   }
 
   void _ensureSlot(int i) {

@@ -122,6 +122,12 @@ abstract class AppLocalizations {
   /// **'Player'**
   String get playerName;
 
+  /// No description provided for @studentGrade.
+  ///
+  /// In en, this message translates to:
+  /// **'Grade 5'**
+  String get studentGrade;
+
   /// No description provided for @levelLabel.
   ///
   /// In en, this message translates to:
@@ -133,6 +139,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Start playing'**
   String get startPlay;
+
+  /// No description provided for @enterClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter class'**
+  String get enterClass;
 
   /// No description provided for @chooseTopic.
   ///
@@ -440,6 +452,12 @@ abstract class AppLocalizations {
   /// **'Log out'**
   String get logOut;
 
+  /// No description provided for @leaveClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave class'**
+  String get leaveClass;
+
   /// No description provided for @logIn.
   ///
   /// In en, this message translates to:
@@ -703,6 +721,576 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Debug code: {code}'**
   String debugOtpHint(String code);
+
+  /// No description provided for @schoolName.
+  ///
+  /// In en, this message translates to:
+  /// **'Lotus School'**
+  String get schoolName;
+
+  /// No description provided for @schoolNameTop.
+  ///
+  /// In en, this message translates to:
+  /// **'LOTUS'**
+  String get schoolNameTop;
+
+  /// No description provided for @schoolNameBottom.
+  ///
+  /// In en, this message translates to:
+  /// **'SCHOOL'**
+  String get schoolNameBottom;
+
+  /// No description provided for @schoolTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Where young sprouts grow'**
+  String get schoolTagline;
+
+  /// No description provided for @freePractice.
+  ///
+  /// In en, this message translates to:
+  /// **'Free practice'**
+  String get freePractice;
+
+  /// No description provided for @classMath.
+  ///
+  /// In en, this message translates to:
+  /// **'Math class'**
+  String get classMath;
+
+  /// No description provided for @classLogic.
+  ///
+  /// In en, this message translates to:
+  /// **'Logic class'**
+  String get classLogic;
+
+  /// No description provided for @classEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'English class'**
+  String get classEnglish;
+
+  /// No description provided for @teacherName.
+  ///
+  /// In en, this message translates to:
+  /// **'Ms. {name}'**
+  String teacherName(String name);
+
+  /// No description provided for @homeroomTeacher.
+  ///
+  /// In en, this message translates to:
+  /// **'Homeroom teacher'**
+  String get homeroomTeacher;
+
+  /// No description provided for @schoolHours.
+  ///
+  /// In en, this message translates to:
+  /// **'School hours {open} – {close}'**
+  String schoolHours(String open, String close);
+
+  /// No description provided for @schoolOpenNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Class is in session. Go check in!'**
+  String get schoolOpenNow;
+
+  /// No description provided for @schoolClosedNow.
+  ///
+  /// In en, this message translates to:
+  /// **'School is closed. Classes run from {open} to {close}.'**
+  String schoolClosedNow(String open, String close);
+
+  /// No description provided for @classSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Students {count}/{max}'**
+  String classSize(int count, int max);
+
+  /// No description provided for @studentYou.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} (you)'**
+  String studentYou(String name);
+
+  /// No description provided for @presentAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Present {time}'**
+  String presentAt(String time);
+
+  /// No description provided for @notArrived.
+  ///
+  /// In en, this message translates to:
+  /// **'Not here yet'**
+  String get notArrived;
+
+  /// No description provided for @notCheckedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Not checked in'**
+  String get notCheckedIn;
+
+  /// No description provided for @checkedInNoTest.
+  ///
+  /// In en, this message translates to:
+  /// **'Checked in, test not taken'**
+  String get checkedInNoTest;
+
+  /// No description provided for @checkIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Check in'**
+  String get checkIn;
+
+  /// No description provided for @startTest.
+  ///
+  /// In en, this message translates to:
+  /// **'Take the test'**
+  String get startTest;
+
+  /// No description provided for @classRules.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher gives one test per class. Below 5 earns a ruler tap on the hand, above 9 earns praise. Leaving mid-test scores 0.'**
+  String get classRules;
+
+  /// No description provided for @todayGrade.
+  ///
+  /// In en, this message translates to:
+  /// **'Today: {grade} pts'**
+  String todayGrade(String grade);
+
+  /// No description provided for @testDoneToday.
+  ///
+  /// In en, this message translates to:
+  /// **'You already took this class\'s test today. Come back tomorrow!'**
+  String get testDoneToday;
+
+  /// No description provided for @seeTeacherComment.
+  ///
+  /// In en, this message translates to:
+  /// **'See teacher\'s comment'**
+  String get seeTeacherComment;
+
+  /// No description provided for @schoolClosedAction.
+  ///
+  /// In en, this message translates to:
+  /// **'School is closed'**
+  String get schoolClosedAction;
+
+  /// No description provided for @gradeOutOfTen.
+  ///
+  /// In en, this message translates to:
+  /// **'{grade}/10'**
+  String gradeOutOfTen(String grade);
+
+  /// No description provided for @verdictPraiseTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent! Your teacher is proud!'**
+  String get verdictPraiseTitle;
+
+  /// No description provided for @verdictPraiseBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Above 9 points. You get praised in front of the class.'**
+  String get verdictPraiseBody;
+
+  /// No description provided for @verdictPunishTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ouch! A ruler tap on the hand!'**
+  String get verdictPunishTitle;
+
+  /// No description provided for @verdictPunishBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher gives you 5 ruler taps.'**
+  String get verdictPunishBody;
+
+  /// No description provided for @scoreResult.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} got {grade} points.'**
+  String scoreResult(String name, String grade);
+
+  /// No description provided for @goToPunish.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to the punishment'**
+  String get goToPunish;
+
+  /// No description provided for @verdictEncourageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Good job, push a little more!'**
+  String get verdictEncourageTitle;
+
+  /// No description provided for @verdictEncourageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher believes you\'ll score above 9 next time.'**
+  String get verdictEncourageBody;
+
+  /// No description provided for @backToClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to class'**
+  String get backToClass;
+
+  /// No description provided for @enrollGreeting.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello! Which class would you like to enroll your child in?'**
+  String get enrollGreeting;
+
+  /// No description provided for @enrollChooseClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a class'**
+  String get enrollChooseClass;
+
+  /// No description provided for @enrollAskName.
+  ///
+  /// In en, this message translates to:
+  /// **'What is your child\'s name?'**
+  String get enrollAskName;
+
+  /// No description provided for @enrollNameTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your child\'s name'**
+  String get enrollNameTitle;
+
+  /// No description provided for @enrollWriteName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a name'**
+  String get enrollWriteName;
+
+  /// No description provided for @enrollNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a name'**
+  String get enrollNameHint;
+
+  /// No description provided for @enrollNameConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Enroll'**
+  String get enrollNameConfirm;
+
+  /// No description provided for @enrollNameEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Please tell the teacher your child\'s name.'**
+  String get enrollNameEmpty;
+
+  /// No description provided for @enrollWelcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s take {name} to {className}!'**
+  String enrollWelcome(String name, String className);
+
+  /// No description provided for @myClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Your class'**
+  String get myClass;
+
+  /// No description provided for @classNotEnrolled.
+  ///
+  /// In en, this message translates to:
+  /// **'Not enrolled'**
+  String get classNotEnrolled;
+
+  /// No description provided for @classLockedHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Your child isn\'t enrolled in this class.'**
+  String get classLockedHint;
+
+  /// No description provided for @classRulesMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher gives one test per class. Below 5 earns a ruler tap on the hand, above 9 earns praise. Leaving mid-test scores 0.'**
+  String get classRulesMale;
+
+  /// No description provided for @teacherHung.
+  ///
+  /// In en, this message translates to:
+  /// **'Mr. Hùng'**
+  String get teacherHung;
+
+  /// No description provided for @teacherNga.
+  ///
+  /// In en, this message translates to:
+  /// **'Ms. Nga'**
+  String get teacherNga;
+
+  /// No description provided for @teacherHoa.
+  ///
+  /// In en, this message translates to:
+  /// **'Ms. Hoa'**
+  String get teacherHoa;
+
+  /// No description provided for @classAskName.
+  ///
+  /// In en, this message translates to:
+  /// **'What is your name?'**
+  String get classAskName;
+
+  /// No description provided for @classAnswer.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer'**
+  String get classAnswer;
+
+  /// No description provided for @classWelcomeMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Class, please welcome {name}. I\'ll show you to your seat.'**
+  String classWelcomeMale(String name);
+
+  /// No description provided for @classWelcomeFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'Class, please welcome {name}. I\'ll show you to your seat.'**
+  String classWelcomeFemale(String name);
+
+  /// No description provided for @classStartTest.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s start the 15-minute test.'**
+  String get classStartTest;
+
+  /// No description provided for @classStartButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Start the test'**
+  String get classStartButton;
+
+  /// No description provided for @verdictPraiseTitleMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent! Your teacher is proud!'**
+  String get verdictPraiseTitleMale;
+
+  /// No description provided for @verdictPraiseBodyMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Above 9 points. You get praised in front of the class.'**
+  String get verdictPraiseBodyMale;
+
+  /// No description provided for @verdictPunishTitleMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Ouch! A ruler tap on the hand!'**
+  String get verdictPunishTitleMale;
+
+  /// No description provided for @verdictPunishBodyMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher gives you 5 ruler taps.'**
+  String get verdictPunishBodyMale;
+
+  /// No description provided for @verdictEncourageTitleMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Good job, push a little more!'**
+  String get verdictEncourageTitleMale;
+
+  /// No description provided for @verdictEncourageBodyMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher believes you\'ll score above 9 next time.'**
+  String get verdictEncourageBodyMale;
+
+  /// No description provided for @candyCheckInGift.
+  ///
+  /// In en, this message translates to:
+  /// **'You came to school today. Here is 1 candy!'**
+  String get candyCheckInGift;
+
+  /// No description provided for @candyPraiseGift.
+  ///
+  /// In en, this message translates to:
+  /// **'Above 9 points. Here are 2 candies!'**
+  String get candyPraiseGift;
+
+  /// No description provided for @candyCount.
+  ///
+  /// In en, this message translates to:
+  /// **'You have {count} candies.'**
+  String candyCount(int count);
+
+  /// No description provided for @candyAccept.
+  ///
+  /// In en, this message translates to:
+  /// **'Take the candy'**
+  String get candyAccept;
+
+  /// No description provided for @exchangeOutfit.
+  ///
+  /// In en, this message translates to:
+  /// **'New outfit'**
+  String get exchangeOutfit;
+
+  /// No description provided for @outfitUniform.
+  ///
+  /// In en, this message translates to:
+  /// **'School uniform'**
+  String get outfitUniform;
+
+  /// No description provided for @outfitSunflower.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunflower shirt'**
+  String get outfitSunflower;
+
+  /// No description provided for @outfitSailor.
+  ///
+  /// In en, this message translates to:
+  /// **'Sailor shirt'**
+  String get outfitSailor;
+
+  /// No description provided for @outfitPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'10 candies'**
+  String get outfitPrice;
+
+  /// No description provided for @outfitWear.
+  ///
+  /// In en, this message translates to:
+  /// **'Wear this'**
+  String get outfitWear;
+
+  /// No description provided for @outfitWearing.
+  ///
+  /// In en, this message translates to:
+  /// **'Wearing'**
+  String get outfitWearing;
+
+  /// No description provided for @outfitShort.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} more candies to go.'**
+  String outfitShort(int count);
+
+  /// No description provided for @reactionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'How do you react?'**
+  String get reactionTitle;
+
+  /// No description provided for @reactionScared.
+  ///
+  /// In en, this message translates to:
+  /// **'Scared'**
+  String get reactionScared;
+
+  /// No description provided for @reactionHappy.
+  ///
+  /// In en, this message translates to:
+  /// **'Cheerful'**
+  String get reactionHappy;
+
+  /// No description provided for @reactionCalm.
+  ///
+  /// In en, this message translates to:
+  /// **'Stubborn'**
+  String get reactionCalm;
+
+  /// No description provided for @reactionTeaseMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Tease him'**
+  String get reactionTeaseMale;
+
+  /// No description provided for @reactionTeaseFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'Tease her'**
+  String get reactionTeaseFemale;
+
+  /// No description provided for @reactionTeaseHintMale.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you want to say?'**
+  String get reactionTeaseHintMale;
+
+  /// No description provided for @reactionTeaseHintFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you want to say?'**
+  String get reactionTeaseHintFemale;
+
+  /// No description provided for @reactionSendMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Say it'**
+  String get reactionSendMale;
+
+  /// No description provided for @reactionSendFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'Say it'**
+  String get reactionSendFemale;
+
+  /// No description provided for @reactionEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Type a sentence first.'**
+  String get reactionEmpty;
+
+  /// No description provided for @reactionReplyScaredMale.
+  ///
+  /// In en, this message translates to:
+  /// **'That was only a light tap. Learn the lesson and next time will be fine.'**
+  String get reactionReplyScaredMale;
+
+  /// No description provided for @reactionReplyScaredFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'That was only a light tap. Learn the lesson and next time will be fine.'**
+  String get reactionReplyScaredFemale;
+
+  /// No description provided for @reactionReplyHappyMale.
+  ///
+  /// In en, this message translates to:
+  /// **'You are smiling? Go review, and your teacher will smile too.'**
+  String get reactionReplyHappyMale;
+
+  /// No description provided for @reactionReplyHappyFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'You are smiling? Go review, and your teacher will smile too.'**
+  String get reactionReplyHappyFemale;
+
+  /// No description provided for @reactionReplyCalmMale.
+  ///
+  /// In en, this message translates to:
+  /// **'So calm. Look again at the part you missed.'**
+  String get reactionReplyCalmMale;
+
+  /// No description provided for @reactionReplyCalmFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'So calm. Look again at the part you missed.'**
+  String get reactionReplyCalmFemale;
+
+  /// No description provided for @reactionReplyTeaseMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher heard you say: \"{line}\". Score above 9, then tease again.'**
+  String reactionReplyTeaseMale(String line);
+
+  /// No description provided for @reactionReplyTeaseFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'Your teacher heard you say: \"{line}\". Score above 9, then tease again.'**
+  String reactionReplyTeaseFemale(String line);
 }
 
 class _AppLocalizationsDelegate

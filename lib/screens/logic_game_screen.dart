@@ -10,9 +10,12 @@ import 'result_screen.dart';
 
 /// Lượt Logic: ảnh đề, 6 ảnh đáp án, 10 giây. Chọn xong sang câu ngay.
 class LogicGameScreen extends StatefulWidget {
-  const LogicGameScreen({super.key, this.session});
+  const LogicGameScreen({super.key, this.session, this.classTest = false});
 
   final LogicGameSession? session;
+
+  /// Bài kiểm tra trên lớp: xong thì pop điểm thang 10, không mở ResultScreen.
+  final bool classTest;
 
   @override
   State<LogicGameScreen> createState() => _LogicGameScreenState();
@@ -22,6 +25,7 @@ class _LogicGameScreenState extends State<LogicGameScreen> {
   late final LogicGameSession _session;
   Timer? _timer;
   final Stopwatch _elapsed = Stopwatch();
+  final Color _background = AppColors.randomClassroomWall();
 
   bool get _warning => _session.secondsLeft <= 1;
 
@@ -64,6 +68,10 @@ class _LogicGameScreenState extends State<LogicGameScreen> {
     _timer?.cancel();
     _elapsed.stop();
     if (!mounted) return;
+    if (widget.classTest) {
+      Navigator.of(context).pop(_session.gradeOutOfTen());
+      return;
+    }
     final elapsed = _elapsed.elapsed;
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
@@ -74,9 +82,7 @@ class _LogicGameScreenState extends State<LogicGameScreen> {
           elapsed: elapsed,
           onReplay: (context) {
             Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute<void>(
-                builder: (_) => const LogicGameScreen(),
-              ),
+              MaterialPageRoute<void>(builder: (_) => const LogicGameScreen()),
               (_) => false,
             );
           },
@@ -103,7 +109,7 @@ class _LogicGameScreenState extends State<LogicGameScreen> {
     final question = _session.current;
 
     return Scaffold(
-      backgroundColor: AppColors.bgLight,
+      backgroundColor: _background,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),

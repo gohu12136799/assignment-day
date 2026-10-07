@@ -44,6 +44,7 @@ dependencies:
   flutter_facebook_auth: ^7.2.0
   cloud_firestore: ^6.10.0
   crypto: ^3.0.7
+  shared_preferences: ^2.5.6
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -83,7 +84,9 @@ flutter:
     - assets/images/brain_rush_mascot.png
     - assets/images/background.png
     - assets/images/bacground_splash.png
+    - assets/images/splash_school.jpg
     - assets/images/result_trophy.svg
+    - assets/images/school/
     - assets/images/question_logic/Q1/
     - assets/images/question_logic/Q1/answer/
     - assets/images/question_logic/Q2/

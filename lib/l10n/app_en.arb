@@ -4,8 +4,10 @@
   "splashSubtitle": "Challenge your mind\nBreak your limits!",
   "loading": "Loading...",
   "playerName": "Player",
+  "studentGrade": "Grade 5",
   "levelLabel": "Level 1",
   "startPlay": "Start playing",
+  "enterClass": "Enter class",
   "chooseTopic": "Choose topic",
   "leaderboard": "Leaderboard",
   "achievements": "Achievements",
@@ -85,6 +87,7 @@
   "rateApp": "Rate the app",
   "contact": "Contact",
   "logOut": "Log out",
+  "leaveClass": "Leave class",
   "logIn": "Log in",
   "signUp": "Sign up",
   "authWelcomeTitle": "Welcome to Brain Rush",
@@ -142,6 +145,186 @@
   "@debugOtpHint": {
     "placeholders": {
       "code": { "type": "String" }
+    }
+  },
+  "schoolName": "Lotus School",
+  "schoolNameTop": "LOTUS",
+  "schoolNameBottom": "SCHOOL",
+  "schoolTagline": "Where young sprouts grow",
+  "freePractice": "Free practice",
+  "classMath": "Math class",
+  "classLogic": "Logic class",
+  "classEnglish": "English class",
+  "teacherName": "Ms. {name}",
+  "@teacherName": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "homeroomTeacher": "Homeroom teacher",
+  "schoolHours": "School hours {open} – {close}",
+  "@schoolHours": {
+    "placeholders": {
+      "open": { "type": "String" },
+      "close": { "type": "String" }
+    }
+  },
+  "schoolOpenNow": "Class is in session. Go check in!",
+  "schoolClosedNow": "School is closed. Classes run from {open} to {close}.",
+  "@schoolClosedNow": {
+    "placeholders": {
+      "open": { "type": "String" },
+      "close": { "type": "String" }
+    }
+  },
+  "classSize": "Students {count}/{max}",
+  "@classSize": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "studentYou": "{name} (you)",
+  "@studentYou": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "presentAt": "Present {time}",
+  "@presentAt": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "notArrived": "Not here yet",
+  "notCheckedIn": "Not checked in",
+  "checkedInNoTest": "Checked in, test not taken",
+  "checkIn": "Check in",
+  "startTest": "Take the test",
+  "classRules": "Your teacher gives one test per class. Below 5 earns a ruler tap on the hand, above 9 earns praise. Leaving mid-test scores 0.",
+  "todayGrade": "Today: {grade} pts",
+  "@todayGrade": {
+    "placeholders": {
+      "grade": { "type": "String" }
+    }
+  },
+  "testDoneToday": "You already took this class's test today. Come back tomorrow!",
+  "seeTeacherComment": "See teacher's comment",
+  "schoolClosedAction": "School is closed",
+  "gradeOutOfTen": "{grade}/10",
+  "@gradeOutOfTen": {
+    "placeholders": {
+      "grade": { "type": "String" }
+    }
+  },
+  "verdictPraiseTitle": "Excellent! Your teacher is proud!",
+  "verdictPraiseBody": "Above 9 points. You get praised in front of the class.",
+  "verdictPunishTitle": "Ouch! A ruler tap on the hand!",
+  "verdictPunishBody": "Your teacher gives you 5 ruler taps.",
+  "scoreResult": "{name} got {grade} points.",
+  "@scoreResult": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "grade": { "type": "String" }
+    }
+  },
+  "goToPunish": "Go to the punishment",
+  "verdictEncourageTitle": "Good job, push a little more!",
+  "verdictEncourageBody": "Your teacher believes you'll score above 9 next time.",
+  "backToClass": "Back to class",
+  "enrollGreeting": "Hello! Which class would you like to enroll your child in?",
+  "enrollChooseClass": "Choose a class",
+  "enrollAskName": "What is your child's name?",
+  "enrollNameTitle": "Your child's name",
+  "enrollWriteName": "Enter a name",
+  "enrollNameHint": "Enter a name",
+  "enrollNameConfirm": "Enroll",
+  "enrollNameEmpty": "Please tell the teacher your child's name.",
+  "enrollWelcome": "Let's take {name} to {className}!",
+  "@enrollWelcome": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "className": { "type": "String" }
+    }
+  },
+  "myClass": "Your class",
+  "classNotEnrolled": "Not enrolled",
+  "classLockedHint": "Your child isn't enrolled in this class.",
+  "classRulesMale": "Your teacher gives one test per class. Below 5 earns a ruler tap on the hand, above 9 earns praise. Leaving mid-test scores 0.",
+  "teacherHung": "Mr. Hùng",
+  "teacherNga": "Ms. Nga",
+  "teacherHoa": "Ms. Hoa",
+  "classAskName": "What is your name?",
+  "classAnswer": "Answer",
+  "classWelcomeMale": "Class, please welcome {name}. I'll show you to your seat.",
+  "@classWelcomeMale": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "classWelcomeFemale": "Class, please welcome {name}. I'll show you to your seat.",
+  "@classWelcomeFemale": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "classStartTest": "Let's start the 15-minute test.",
+  "classStartButton": "Start the test",
+  "verdictPraiseTitleMale": "Excellent! Your teacher is proud!",
+  "verdictPraiseBodyMale": "Above 9 points. You get praised in front of the class.",
+  "verdictPunishTitleMale": "Ouch! A ruler tap on the hand!",
+  "verdictPunishBodyMale": "Your teacher gives you 5 ruler taps.",
+  "verdictEncourageTitleMale": "Good job, push a little more!",
+  "verdictEncourageBodyMale": "Your teacher believes you'll score above 9 next time.",
+  "candyCheckInGift": "You came to school today. Here is 1 candy!",
+  "candyPraiseGift": "Above 9 points. Here are 2 candies!",
+  "candyCount": "You have {count} candies.",
+  "@candyCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "candyAccept": "Take the candy",
+  "exchangeOutfit": "New outfit",
+  "outfitUniform": "School uniform",
+  "outfitSunflower": "Sunflower shirt",
+  "outfitSailor": "Sailor shirt",
+  "outfitPrice": "10 candies",
+  "outfitWear": "Wear this",
+  "outfitWearing": "Wearing",
+  "outfitShort": "{count} more candies to go.",
+  "@outfitShort": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "reactionTitle": "How do you react?",
+  "reactionScared": "Scared",
+  "reactionHappy": "Cheerful",
+  "reactionCalm": "Stubborn",
+  "reactionTeaseMale": "Tease him",
+  "reactionTeaseFemale": "Tease her",
+  "reactionTeaseHintMale": "What do you want to say?",
+  "reactionTeaseHintFemale": "What do you want to say?",
+  "reactionSendMale": "Say it",
+  "reactionSendFemale": "Say it",
+  "reactionEmpty": "Type a sentence first.",
+  "reactionReplyScaredMale": "That was only a light tap. Learn the lesson and next time will be fine.",
+  "reactionReplyScaredFemale": "That was only a light tap. Learn the lesson and next time will be fine.",
+  "reactionReplyHappyMale": "You are smiling? Go review, and your teacher will smile too.",
+  "reactionReplyHappyFemale": "You are smiling? Go review, and your teacher will smile too.",
+  "reactionReplyCalmMale": "So calm. Look again at the part you missed.",
+  "reactionReplyCalmFemale": "So calm. Look again at the part you missed.",
+  "reactionReplyTeaseMale": "Your teacher heard you say: \"{line}\". Score above 9, then tease again.",
+  "@reactionReplyTeaseMale": {
+    "placeholders": {
+      "line": { "type": "String" }
+    }
+  },
+  "reactionReplyTeaseFemale": "Your teacher heard you say: \"{line}\". Score above 9, then tease again.",
+  "@reactionReplyTeaseFemale": {
+    "placeholders": {
+      "line": { "type": "String" }
     }
   }
 }

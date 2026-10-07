@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../auth/auth_scope.dart';
 import '../l10n/app_localizations.dart';
 import '../locale_controller.dart';
+import '../school/school_reset.dart';
 import '../theme/app_colors.dart';
-import 'auth/auth_hub_screen.dart';
+import 'school/enrollment_screen.dart';
 
 /// Cài đặt. Chỉ đổi ngôn ngữ có tác dụng. Các mục khác là giao diện.
 class SettingsScreen extends StatefulWidget {
@@ -79,9 +80,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final l10n = AppLocalizations.of(context)!;
     final locale = LocaleScope.of(context);
     final languageName = locale.isVietnamese ? l10n.vietnamese : l10n.english;
-
-    final auth = AuthScope.of(context);
-    final signedIn = auth.isSignedIn;
 
     return Scaffold(
       backgroundColor: AppColors.bgLight,
@@ -164,42 +162,41 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ]),
           const SizedBox(height: 24),
           OutlinedButton(
-            onPressed: () async {
-              if (signedIn) {
-                await auth.signOut();
-                if (context.mounted) Navigator.of(context).pop();
-                return;
-              }
-              await Navigator.of(context).push(
-                MaterialPageRoute<void>(
-                  builder: (_) => const AuthHubScreen(),
-                ),
-              );
-            },
+            onPressed: _leaveClass,
             style: OutlinedButton.styleFrom(
-              foregroundColor: signedIn
-                  ? AppColors.redIconGradient.first
-                  : AppColors.bgBlue,
-              backgroundColor: signedIn
-                  ? AppColors.redIconGradient.first.withValues(alpha: 0.12)
-                  : AppColors.bgBlue.withValues(alpha: 0.08),
-              side: BorderSide(
-                color: signedIn
-                    ? AppColors.redIconGradient.first
-                    : AppColors.bgBlue,
+              foregroundColor: AppColors.redIconGradient.first,
+              backgroundColor: AppColors.redIconGradient.first.withValues(
+                alpha: 0.12,
               ),
+              side: BorderSide(color: AppColors.redIconGradient.first),
               minimumSize: const Size.fromHeight(60),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
             child: Text(
-              signedIn ? l10n.logOut : l10n.logIn,
+              l10n.leaveClass,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Future<void> _leaveClass() async {
+    await resetSchoolProgress();
+    if (!mounted) return;
+    final auth = AuthScope.of(context);
+    if (auth.isSignedIn) {
+      try {
+        await auth.signOut();
+      } catch (_) {}
+    }
+    if (!mounted) return;
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute<void>(builder: (_) => const EnrollmentScreen()),
+      (_) => false,
     );
   }
 

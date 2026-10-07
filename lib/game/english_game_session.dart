@@ -2,6 +2,7 @@ import 'dart:math';
 
 import '../data/english_questions.dart';
 import '../models/english_passage.dart';
+import '../school/school_rules.dart';
 import 'game_constants.dart';
 import 'game_session.dart';
 
@@ -95,4 +96,8 @@ class EnglishGameSession {
   int scorePercent() {
     return foundCount() * 100 ~/ GameConstants.englishErrorCount;
   }
+
+  /// Thang 10 cho bài kiểm tra trên lớp. Chỉ gọi sau khi hết giờ.
+  double gradeOutOfTen() =>
+      tenPointGrade(foundCount(), GameConstants.englishErrorCount);
 }
